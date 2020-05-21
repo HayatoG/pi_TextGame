@@ -17,17 +17,19 @@ public class parte1 {
            
             System.out.println("(1) CAIXAS | (2) PORTA | (3) ESTANTE ");
             System.out.println("O que você quer olhar?");
-            int decisão = s.nextInt();
             
+            if(s.hasNextInt()){
+            int decisão = s.nextInt();
+                
             if (decisão > 3 || decisão < 1) {
-                System.out.println("Coloque um número válido.");
+                System.out.println("Coloque um número válido." + "\n");
                 parte1.parte1();
             }
             else{
                  switch(decisão){
                      case 1:
                          if (JogoPI.Lanterna==true) {
-                             System.out.println("Você conseguiu a nilce puts grila vei.");
+                             System.out.println("Você conseguiu a nilce puts grila vei." + "\n");
                              parte1.parte1();
                          } 
                          else{
@@ -37,20 +39,24 @@ public class parte1 {
                          
                      case 2:
                          System.out.println(); // 1ºpuzzle depois levar pra função corredor 
-                         System.out.println("Está trancada.");
+                         System.out.println("Está trancada." + "\n");
                          parte1.parte1();
                          
                      case 3:
                          JogoPI.inventario[0]= JogoPI.lanternaEstante;
                          JogoPI.Lanterna=true;
                          
-                         System.out.println("Você encontrou a lanterna");
+                         System.out.println("Você encontrou a lanterna" + "\n");
                          parte1.parte1();
                          
                          
                  }
             }
-        
+            }
+            else{
+                System.out.println("Opção inválida." + "\n");
+                parte1.parte1();
+            }
     }
         
     
