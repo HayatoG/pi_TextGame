@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package jogopi;
 import java.util.Scanner;
 import java.io.IOException;
-/**
- *
- * @author olive
- */
+
 public class parte1 {
         static void parte1(){
-//            colocar validação caso o usuário coloque string
+           //colocar validação caso o usuário coloque string
             Scanner s = new Scanner(System.in);
            
             System.out.println("(1) CAIXAS | (2) PORTA | (3) ESTANTE ");

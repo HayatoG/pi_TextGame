@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package jogopi;
 import java.util.Scanner;
-/**
- *
- * @author olive
- */
+
 public class corredorRat {
     public static void corredor(){
         Scanner s = new Scanner(System.in);
