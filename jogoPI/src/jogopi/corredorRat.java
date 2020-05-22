@@ -6,7 +6,7 @@ public class corredorRat {
         Scanner s = new Scanner(System.in);
         
         System.out.println(" ");//descrição do roteiro sobre o corredor
-        System.out.println("Você encontrou: Chaves e uma foto.");
+        System.out.println("Você encontrou: Chaves e uma foto." + "\n");
         System.out.println("(1) QUARTO | (2) SALA | (3) COZINHA");
         System.out.println("O que você quer olhar? ");
         int decisao;

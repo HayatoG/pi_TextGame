@@ -3,7 +3,9 @@ package jogopi;
 public class JogoPI {
     
     static boolean Lanterna=false;
-    static String lanternaEstante="L";
+    static String lanternaEstante="Lanterna";
+    static boolean gazua = false;
+    static String gazuaCaixas="Gazua";
     static  String [] inventario = new String [10];
     
     

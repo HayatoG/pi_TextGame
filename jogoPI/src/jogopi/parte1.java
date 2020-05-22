@@ -21,7 +21,7 @@ public class parte1 {
                  switch(decisão){
                      case 1:
                          if (JogoPI.Lanterna==true) {
-                             System.out.println("Você encontrou uma gazua." + "\n");
+                             System.out.println("Conseguindo enxergar melhor com a lanterna você encontra uma gazua"+ "\n");
                              JogoPI.inventario[1]= JogoPI.gazuaCaixas;
                              JogoPI.gazua=true;
                              parte1.parte1();
