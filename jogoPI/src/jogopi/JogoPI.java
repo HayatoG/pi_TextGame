@@ -7,16 +7,20 @@ public class JogoPI {
     static boolean Foto=false;
     static boolean ChaveCarro=false;
     static boolean gazua = false;
-    static String lanternaEstante="L";
-    static String chavesInvetario="K";
-    static String fotoInvetario="F";
-    static String chaveCarroInventario="C";
+    static boolean arma = false;
+    static boolean faca = false;
+    static String lanternaEstante="Lanterna";
+    static String chavesInvetario="Chaves";
+    static String fotoInvetario="Foto";
+    static String chaveCarroInventario="Chaves do carro";
     static String gazuaCaixas="Gazua";
+    static String armaCozinha="Pistola .38";
+    static String facaCozinha = "Faca";
     
-    static  String [] inventario = new String [10];
+    static  String [] inventario = new String [8];
     
     public static void main(String[] args) {
-        telaInicial.telaInicio();
+        //telaInicial.telaInicio();
         parte1.parte1();
     }
 }

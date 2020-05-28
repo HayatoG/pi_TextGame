@@ -1,4 +1,3 @@
-
 package jogopi;
 import java.util.Scanner;
 import java.io.IOException;
@@ -7,13 +6,13 @@ public class parte1 {
         static void parte1(){
             Scanner s = new Scanner(System.in);
            
-            System.out.println("(1) CAIXAS | (2) PORTA | (3) ESTANTE ");
+            System.out.println("(1) CAIXAS | (2) PORTA | (3) ESTANTE | (4)INVENTÁRIO");
             System.out.println("O que você quer olhar?");
             
             if(s.hasNextInt()){
             int decisão = s.nextInt();
                 
-            if (decisão > 3 || decisão < 1) {
+            if (decisão > 4 || decisão < 1) {
                 System.out.println("Coloque um número válido." + "\n");
                 parte1.parte1();
             }
@@ -51,6 +50,9 @@ public class parte1 {
                          System.out.println("Você encontrou a lanterna" + "\n");
                          parte1.parte1();
                          }
+                     case 4:
+                         inventario();
+                         parte1.parte1();
                  }
             }
             }
@@ -129,6 +131,16 @@ public class parte1 {
                 puzzle1();
             }
     }
-        
-    
-}
+         public static void inventario(){
+                 int i=0;
+                         System.out.println("---------INVENTÁRIO---------");
+                               if (JogoPI.inventario[0] == null) {
+                                 System.out.println("Inventário vazio");
+                             }
+                             
+                             do{
+                                 System.out.println(JogoPI.inventario[i]);
+                                 i++;
+                             }while(JogoPI.inventario[i]!=null);
+                 }
+            }

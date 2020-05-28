@@ -11,7 +11,7 @@ public class corredorRat {
             JogoPI.Chaves = true;
             JogoPI.Foto = true;
         }
-        System.out.println("(1) QUARTO | (2) SALA | (3) COZINHA | (4) FOTO");
+        System.out.println("(1) SALA | (2) COZINHA | (3) QUARTO  | (4) INVENTÁRIO");
         System.out.println("O que você quer olhar? ");
         int decisao;
         if (s.hasNextInt()) {
@@ -24,14 +24,25 @@ public class corredorRat {
             else{
                 switch(decisao){
                     case 1:
-                        //corredorRat.corredor();
+                        if (JogoPI.faca == false || JogoPI.arma==false) {
+                            System.out.println("Ouço gente lá dentro não vou entrar");
+                        }
+                        else{
+                            parte4.parte4();
+                        }
                     case 2:
-                        //o que acontece na sala
+                        
+                        
                     case 3:
-                        //o que acontece na cozinha
+                    //tem um puzzle mas os caras da sala podem me ouvir
+                        
                     case 4:
-                        System.out.print("Olhando a foto...");
+                        parte1.inventario();
+                        corredorRat.corredor();
                 }
+                
+                
+                
             }        
         }
     }
