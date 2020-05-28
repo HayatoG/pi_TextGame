@@ -50,7 +50,6 @@ public class parte1 {
                          System.out.println("Você encontrou a lanterna" + "\n");
                          parte1.parte1();
                          }
-                         
                      case 4:
                          inventario();
                          parte1.parte1();
@@ -131,10 +130,7 @@ public class parte1 {
                 System.out.println("Digite uma posição válida.");
                 puzzle1();
             }
-            
-           
     }
-        
          public static void inventario(){
                  int i=0;
                          System.out.println("---------INVENTÁRIO---------");
@@ -146,6 +142,5 @@ public class parte1 {
                                  System.out.println(JogoPI.inventario[i]);
                                  i++;
                              }while(JogoPI.inventario[i]!=null);
-                         
                  }
             }
