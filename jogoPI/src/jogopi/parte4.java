@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class parte4 {
     static void parte4(){
         //Colocar validação caso o usuário coloque String
+        //sala
         Scanner s = new Scanner(System.in);
         
         System.out.println("Um deles está dormindo...");
@@ -23,14 +24,15 @@ public class parte4 {
                         System.out.println("Sequestrador morto...");
                         System.out.println("Encontrei uma chave de carro.");
                         JogoPI.ChaveCarro = true;
+                        //threadsleep
                         corredorRat.corredor();
-                        break;
                     case 2:
                         System.out.println("Droga! Tem mais!?");
                         System.out.println("(1) ATACAR COM FACA | (2) SE EXPLICAR COM O SEQUESTRADOR");
                         int segundadecisao = s.nextInt();
                         if(segundadecisao == 1){
-                            System.out.println("Mais um morto, agora eu tenho que sair daqui!");
+                            System.out.println("Mais um morto, agora eu posso resolver o puzzle!");
+                            corredorRat.corredor();
                         }
                         else if(segundadecisao == 2){
                             System.out.println("[DIALOGO DA EXPLICAÇÃO]");
