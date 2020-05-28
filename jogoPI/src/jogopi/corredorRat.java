@@ -35,15 +35,28 @@ public class corredorRat {
                         
                     case 3:
                     //tem um puzzle mas os caras da sala podem me ouvir
+                        System.out.println("Ao se aproximar da porta você encontra um bilhete e um painel com numeros de um a dez, no bilhete está escrito \"Desafio: Há 10 peixer em um aquário: \n" +
+                            "-3 se afogam;\n" +
+                            "-2 fogem nadando;\n" +
+                            "-5 morrem.\n" +
+                            "\n" +
+                            "Digite quantos sobraram?\"");
+                            int resp = s.nextInt();
+
+                            if (resp == 7) {
+                                System.out.println("Parabéns você acertou a resposta!");
+                            }
+                            else {
+                                System.out.println("Você errou a resposta!");
+                            decisao = 3;
+                            }
+                    
                         
                     case 4:
                         parte1.inventario();
                         corredorRat.corredor();
+                    }
                 }
-                
-                
-                
             }        
         }
     }
-}
