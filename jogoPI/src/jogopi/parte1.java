@@ -6,42 +6,42 @@ public class parte1 {
         static void parte1(){
             Scanner s = new Scanner(System.in);
             if (JogoPI.Itens == false) {
-            System.out.println("(1) CAIXAS | (2) PORTA | (3) ESTANTE ");
+            System.out.println("\n" +"(1) CAIXAS | (2) PORTA | (3) ESTANTE ");
             System.out.println("O que você quer olhar?");
             }
             else{
-            System.out.println("(1) CAIXAS | (2) PORTA | (3) ESTANTE | (4)INVENTÁRIO");
+            System.out.println("\n" + "(1) CAIXAS | (2) PORTA | (3) ESTANTE | (4)INVENTÁRIO");
             System.out.println("O que você quer olhar?");
            }
             if(s.hasNextInt()){
             int decisão = s.nextInt();
                 
             if (decisão > 4 || decisão < 1) {
-                System.out.println("Coloque um número válido." + "\n");
+                System.out.println("\n" + "Coloque um número válido." + "\n");
                 parte1.parte1();
             }
             else{
                  switch(decisão){
                      case 1:
                          if (JogoPI.Lanterna==true) {
-                             System.out.println("Conseguindo enxergar melhor com a lanterna você encontra uma gazua"+ "\n");
+                             System.out.println("\n" + "Conseguindo enxergar melhor com a lanterna você encontra uma gazua"+ "\n");
                              JogoPI.inventario[1]= JogoPI.gazuaCaixas;
                              JogoPI.gazua=true;
                              JogoPI.Itens=true;
                              parte1.parte1();
                          } 
                          else{
-                         System.out.println("Está muito escuro aqui..." + "\n"); //puzzle a ser desenvolvido e adiconado no inventário
+                         System.out.println("\n" + "Está muito escuro aqui..." + "\n"); 
                          parte1.parte1();
                          }
                          
                      case 2:
                          if (JogoPI.gazua==false) {
-                         System.out.println("Está trancada." + "\n");
+                         System.out.println("\n" + "Está trancada." + "\n");
                          parte1.parte1();    
                          }
                          else{
-                             System.out.println("Você tenta decifrar em como abrir a porta com a gazua"+ "\n");
+                             System.out.println("\n" + "Você tenta decifrar em como abrir a porta com a gazua"+ "\n");
                              puzzle1();
                              
                          }
@@ -53,7 +53,7 @@ public class parte1 {
                          JogoPI.inventario[0]= JogoPI.lanternaEstante;
                          JogoPI.Lanterna=true;
                          JogoPI.Itens=true;
-                         System.out.println("Você encontrou a lanterna" + "\n");
+                         System.out.println("\n" + "Você encontrou a lanterna" + "\n");
                          parte1.parte1();
                          }
                      case 4:
@@ -63,7 +63,7 @@ public class parte1 {
             }
             }
             else{
-                System.out.println("Opção inválida." + "\n");
+                System.out.println("\n" + "Opção inválida." + "\n");
                 parte1.parte1();
             }
     }
@@ -79,7 +79,7 @@ public class parte1 {
 "                                               " + "\n");
 
             
-            System.out.println("Girar: " + "\n"
+            System.out.println("\n" + "Girar: " + "\n"
                     + "(1) POSIÇÃO 1, 4 E 6  " + "\n"
                     + "(2) POSIÇÃO 2, 3 E 4  " + "\n"
                     + "(3) POSIÇÃO 3, 1 E 4  " + "\n"
@@ -89,7 +89,7 @@ public class parte1 {
             int girar = s.nextInt();
             
                 if (girar < 1 || girar > 5) {
-                    System.out.println("Posição inválida.");
+                    System.out.println("\n" + "Posição inválida.");
                     puzzle1();
                 }
                 
@@ -98,7 +98,7 @@ public class parte1 {
                 case 2:
                 case 3:
                 case 4:
-                    System.out.println("Falha!");
+                    System.out.println("\n" + "Falha!");
                     puzzle1();
                     //dar uns thread.sleep aqui
                 case 5:
@@ -126,14 +126,14 @@ public class parte1 {
 " \\ |_                                              _| / \n" +
 " |___|                                            |___| \n" +
 "                                                        " + "\n");
-                    System.out.println("Você destravou a porta!");
-                    System.out.println("Entrando no corredor...");
+                    System.out.println("\n" + "Você destravou a porta!");
+                    System.out.println("\n" + "Entrando no corredor...");
                     corredorRat.corredor();
             }
             
             }
             else{
-                System.out.println("Digite uma posição válida.");
+                System.out.println("\n" + "Digite uma posição válida.");
                 puzzle1();
             }
     }
@@ -143,10 +143,11 @@ public class parte1 {
                                if (JogoPI.inventario[0] == null) {
                                  System.out.println("Inventário vazio");
                              }
-                             
+                               else{
                              do{
                                  System.out.println(JogoPI.inventario[i]);
                                  i++;
                              }while(JogoPI.inventario[i]!=null);
+                               }
                  }
             }

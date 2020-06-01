@@ -8,14 +8,13 @@ public class JogoPI {
     static boolean ChaveCarro=false;
     static boolean gazua = false;
     static boolean arma = false;
-    static boolean faca = false;
-    static String lanternaEstante="Lanterna";
-    static String chavesInvetario="Chaves";
-    static String fotoInvetario="Foto";
-    static String chaveCarroInventario="Chaves do carro";
-    static String gazuaCaixas="Gazua";
-    static String armaCozinha="Pistola .38";
-    static String facaCozinha = "Faca";
+    static boolean puzzled = false;
+    static String lanternaEstante="Lanterna"; //0
+    static String chavesInvetario="Chaves"; //5
+    static String fotoInvetario="Foto"; //3 
+    static String chaveCarroInventario="Chaves do carro"; //2
+    static String gazuaCaixas="Gazua"; //1
+    static String armaCozinha="Pistola .38"; //4
     
     static  String [] inventario = new String [8];
     

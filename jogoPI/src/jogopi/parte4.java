@@ -32,10 +32,12 @@ public class parte4 {
                         int segundadecisao = s.nextInt();
                         if(segundadecisao == 1){
                             System.out.println("Mais um morto, agora eu posso resolver o puzzle!");
+                            JogoPI.puzzled=true;
                             corredorRat.corredor();
                         }
                         else if(segundadecisao == 2){
                             System.out.println("[DIALOGO DA EXPLICAÇÃO]");
+                            JogoPI.puzzled=true;
                         }
                         else{
                             System.out.println("Digite um número válido!!");
