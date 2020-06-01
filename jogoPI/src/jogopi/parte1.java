@@ -5,10 +5,14 @@ import java.io.IOException;
 public class parte1 {
         static void parte1(){
             Scanner s = new Scanner(System.in);
-           
+            if (JogoPI.Itens == false) {
+            System.out.println("(1) CAIXAS | (2) PORTA | (3) ESTANTE ");
+            System.out.println("O que você quer olhar?");
+            }
+            else{
             System.out.println("(1) CAIXAS | (2) PORTA | (3) ESTANTE | (4)INVENTÁRIO");
             System.out.println("O que você quer olhar?");
-            
+           }
             if(s.hasNextInt()){
             int decisão = s.nextInt();
                 
@@ -23,6 +27,7 @@ public class parte1 {
                              System.out.println("Conseguindo enxergar melhor com a lanterna você encontra uma gazua"+ "\n");
                              JogoPI.inventario[1]= JogoPI.gazuaCaixas;
                              JogoPI.gazua=true;
+                             JogoPI.Itens=true;
                              parte1.parte1();
                          } 
                          else{
@@ -47,6 +52,7 @@ public class parte1 {
                          else{
                          JogoPI.inventario[0]= JogoPI.lanternaEstante;
                          JogoPI.Lanterna=true;
+                         JogoPI.Itens=true;
                          System.out.println("Você encontrou a lanterna" + "\n");
                          parte1.parte1();
                          }

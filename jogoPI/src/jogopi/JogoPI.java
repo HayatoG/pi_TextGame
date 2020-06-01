@@ -1,7 +1,7 @@
 package jogopi;
 
 public class JogoPI {
-    
+    static boolean Itens = false;
     static boolean Lanterna=false;
     static boolean Chaves=false;
     static boolean Foto=false;
@@ -20,7 +20,8 @@ public class JogoPI {
     static  String [] inventario = new String [8];
     
     public static void main(String[] args) {
-        //telaInicial.telaInicio();
-       corredorRat.corredor();
+        telaInicial.telaInicio();
+        parte1.parte1();
+       
     }
 }

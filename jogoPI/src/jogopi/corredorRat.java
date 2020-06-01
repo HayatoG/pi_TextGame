@@ -35,7 +35,9 @@ public class corredorRat {
                         
                     case 3:
                     //tem um puzzle mas os caras da sala podem me ouvir
-                        System.out.println("Ao se aproximar da porta você encontra um bilhete e um painel com numeros de um a dez, no bilhete está escrito \"Desafio: Há 10 peixer em um aquário: \n" +
+                        System.out.println("Ao se aproximar da porta você encontra "
+                                + "um bilhete e um painel com numeros de um a dez, "
+                                + "no bilhete está escrito \"Desafio: Há 10 peixer em um aquário: \n" +
                             "-3 se afogam;\n" +
                             "-2 fogem nadando;\n" +
                             "-5 morrem.\n" +
