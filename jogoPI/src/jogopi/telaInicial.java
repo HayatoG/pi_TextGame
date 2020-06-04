@@ -14,6 +14,6 @@ public class telaInicial {
         System.out.println("\n");
         System.out.println("Pressione [ENTER] para continuar...");
         s.nextLine();
-        parte1.parte1();
+        Porao.porao();
     }
 }

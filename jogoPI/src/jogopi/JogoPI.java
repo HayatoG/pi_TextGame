@@ -10,6 +10,7 @@ public class JogoPI {
     static boolean ChaveCarro=false;
     static boolean gazua = false;
     static boolean arma = false;
+    static boolean faca = false;
     static boolean puzzled = false;
     static String lanternaEstante="Lanterna"; //0
     static String chavesInvetario="Chaves"; //5
@@ -27,7 +28,7 @@ public class JogoPI {
     static String [] inventario = new String [8];
     
     public static void main(String[] args) {
-        //telaInicial.telaInicio();
-        parte4.parte4();
+        telaInicial.telaInicio();
+        //Quarto.quarto();
     }
 }
