@@ -6,12 +6,12 @@ public class Quarto {
         
         Scanner s = new Scanner(System.in);
 
-        System.out.println("A porta está trancada com o mesmo mecaniismo do porão");
+        System.out.println("A porta está trancada com o mesmo mecanismo do porão");
 
         //puzzle para abrir a porta
         System.out.println("[PABLO]: Vicente, o que você está fazendo?" + "\n" + "Como pode fazer isso comigo depois de tantos anos juntos?");
         s.nextLine();
-        System.out.println("[VICENTE]: Você não me deu escolha Pablo." + "\n" + "Precisava de você para consguir os arquivos...");
+        System.out.println("[VICENTE]: Você não me deu escolha Pablo." + "\n" + "Precisava de você para conseguir os arquivos...");
         s.nextLine();
         System.out.println("[VICENTE]: AGORA NÃO PRECISO MAIS..." + "\n");
 
@@ -49,7 +49,7 @@ public class Quarto {
                 }    
                     if (energiaJogador <= 0) {
                         System.out.println("FIM DE JOGO");
-                        quarto();
+                        
 
                     } else {
                         System.out.println("[VICENTE]: Outras pessoas virão para pegar esse projeto.......");
@@ -63,11 +63,11 @@ public class Quarto {
                 
 
             } else {
-                System.out.println("[PABLO]: Calma Vicente, podemos conversar e acertar as coisas, você precida de dinheiro?" + "\n");
+                System.out.println("[PABLO]: Calma Vicente, podemos conversar e acertar as coisas, você precisa de dinheiro?" + "\n");
                 s.nextLine();
-                System.out.println("[VICENTE]: Dinheiro nunca foi o problema. Eu quero controle e com você fora do meu caminho tudo ficará mais fácil");
+                System.out.println("[VICENTE]: Dinheiro nunca foi o problema. Eu quero controle e com você fora do meu caminho tudo ficará mais fácil!");
                 s.nextLine();
-                System.out.println("[PABLO]: Eu vou embora então, vamos fingir que nada disso aconteceu.");
+                System.out.println("[PABLO]: Eu vou embora então, vamos fingir que nada disso aconteceu!");
                 s.nextLine();
                 System.out.println("[VICENTE]: Agora já é tarde, preciso terminar o que comecei...");
                 s.nextLine();
@@ -110,7 +110,7 @@ public class Quarto {
                     }
                     else{
                         System.out.println("FIM DE JOGO");
-                        quarto();
+                        
                     }
                 
                     
