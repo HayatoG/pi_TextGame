@@ -1,0 +1,8 @@
+<<<<<<< OURS
+/jogoPI/build/
+/jogoPI/dist/
+=======
+/jogoPI/nbproject/private/
+/jogoPI/build/
+/jogoPI/dist/
+>>>>>>> THEIRS
