@@ -1,9 +1,9 @@
 package jogopi;
-import java.util.Scanner;
+
+import static jogopi.JogoPI.s;
 
 public class corredorRat {
     public static void corredor(){
-        Scanner s = new Scanner(System.in);
         
         System.out.println(" ");//descrição do roteiro sobre o corredor
         if(JogoPI.Chaves == false && JogoPI.Foto == false){
@@ -44,11 +44,7 @@ public class corredorRat {
                         }
                         else{
                            puzzle2();
-                          
                         }
-              
-                    
-                        
                     case 4:
                         parte1.inventario();
                         corredorRat.corredor();
@@ -56,8 +52,8 @@ public class corredorRat {
                 }
             }        
         }
-                static void puzzle2(){
-                
-            }
-           
+    static void puzzle2(){
+        
     }
+           
+}

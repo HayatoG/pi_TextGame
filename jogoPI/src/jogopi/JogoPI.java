@@ -1,4 +1,6 @@
 package jogopi;
+import java.util.Random;
+import java.util.Scanner;
 
 public class JogoPI {
     static boolean Itens = false;
@@ -16,11 +18,16 @@ public class JogoPI {
     static String gazuaCaixas="Gazua"; //1
     static String armaCozinha="Pistola .38"; //4
     
-    static  String [] inventario = new String [8];
+    static int energiaInimigo = 6;
+    static int energiaJogador = 7;
+    
+    static Scanner s = new Scanner(System.in);
+    static Random aleatorio = new Random();
+    
+    static String [] inventario = new String [8];
     
     public static void main(String[] args) {
-        telaInicial.telaInicio();
-        parte1.parte1();
-       
+        //telaInicial.telaInicio();
+        parte4.parte4();
     }
 }
