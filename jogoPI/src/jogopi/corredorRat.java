@@ -28,25 +28,27 @@ public class corredorRat {
                     case 1:
                         if (JogoPI.arma==false) {
                             System.out.println("\n" + "Ouço gente lá dentro não vou entrar");
-                            corredor();
+                            corredorRat.corredor();
                         }
                         else{
-                            parte4.parte4();
+                            Sala.sala();
                         }
                     case 2:
                         System.out.println("Na cozinha você encontra: Um révolver .38");
                         JogoPI.inventario[4]=JogoPI.armaCozinha;
                         JogoPI.arma=true;
-                        
+                        corredorRat.corredor();
                     case 3:
                         if (JogoPI.puzzled==false) {
                             System.out.println("Não consigo fazer abri-la com esses caras na sala.");
+                            corredorRat.corredor();
                         }
                         else{
                            puzzle2();
+                           Quarto.quarto();
                         }
                     case 4:
-                        parte1.inventario();
+                        Porao.inventario();
                         corredorRat.corredor();
                     }
                 }
