@@ -71,13 +71,13 @@ public class Quarto {
                 s.nextLine();
                 System.out.println("[VICENTE]: Agora já é tarde, preciso terminar o que comecei...");
                 s.nextLine();
-                System.out.println("VICENTE ACIONA UM BOTÃO E PULA PELA JANELA, PABLO NÃO ESPERA PARA VER O QUE ACONTECERÁ E PULA TAMBEM.");
+                System.out.println("[ VICENTE ACIONA UM BOTÃO E PULA PELA JANELA, PABLO NÃO ESPERA PARA VER O QUE ACONTECERÁ E PULA TAMBEM. ]");
                 s.nextLine();
                 System.out.println("(1) FUGIR | (2) LUTAR");
                 decisao = s.nextInt();
 
                 if (decisao == 1) {
-                    System.out.println("VICENTE FICA COM OS ARQUIVOS E O PROJETO FOI ROUBADO." + "\n" + "FIM DE JOGO");
+                    System.out.println("[ VICENTE FICA COM OS ARQUIVOS E O PROJETO FOI ROUBADO. ]" + "\n" + "FIM DE JOGO");
                     
 
                 } else {
