@@ -57,7 +57,7 @@ public class parte4 {
                         if(segundadecisao == 1){
                             atirarInimigo();
                             JogoPI.puzzled=true;
-                            //corredorRat.corredor();
+                            corredorRat.corredor();
                         }
                         else if(segundadecisao == 2){
                             System.out.println("[DIALOGO DA EXPLICAÇÃO]");
