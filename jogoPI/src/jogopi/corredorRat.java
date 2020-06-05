@@ -44,18 +44,14 @@ public class corredorRat {
                             corredorRat.corredor();
                         }
                         else{
-                           puzzle2();
+                           puzzles.puzzle2();
                            Quarto.quarto();
                         }
                     case 4:
-                        Porao.inventario();
+                        inventario.inventario();
                         corredorRat.corredor();
                     }
                 }
             }        
         }
-    static void puzzle2(){
-        
-    }
-           
 }
