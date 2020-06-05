@@ -29,6 +29,5 @@ public class JogoPI {
     public static void main(String[] args) {
         //telaInicial.telaInicio();
         parte4.parte4();
-       
     }
 }
