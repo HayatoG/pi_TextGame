@@ -4,18 +4,24 @@ import static jogopi.JogoPI.s;
 
 public class Porao {
     static void porao(){
+        if (JogoPI.nomeJogador.isEmpty()) {
+        System.out.println("INSIRA SEU NOME:");
+        JogoPI.nomeJogador= s.next();
+       String nomePlayer = JogoPI.nomeJogador.toUpperCase();
+        }
+       
         if (JogoPI.Itens == false) {
-            System.out.println("\n" +"(1) CAIXAS | (2) PORTA | (3) ESTANTE ");
-            System.out.println("O que você quer olhar?");
+            System.out.println("\n" +"(1) CAIXAS | (2) PORTA | (3) ESTANTE  ");
+            System.out.println(" O que você quer olhar?");
         }
         else{
-            System.out.println("\n" + "(1) CAIXAS | (2) PORTA | (3) ESTANTE | (4)INVENTÁRIO");
+            System.out.println("\n" + "(1) CAIXAS | (2) PORTA | (3) ESTANTE | (4)INVENTÁRIO | (5) MAPA");
             System.out.println("O que você quer olhar?");
         }
         if(s.hasNextInt()){
             int decisão = s.nextInt();
                 
-            if (decisão > 4 || decisão < 1) {
+            if (decisão > 5 || decisão < 1) {
                 System.out.println("\n" + "Coloque um número válido." + "\n");
                 Porao.porao();
             }
@@ -42,7 +48,6 @@ public class Porao {
                         else{
                             System.out.println("\n" + "Você tenta decifrar em como abrir a porta com a gazua"+ "\n");
                              puzzles.puzzle1();
-                            
                         }
                     case 3:
                         if(JogoPI.Lanterna==true){
@@ -57,6 +62,10 @@ public class Porao {
                         }
                     case 4:
                         inventario.inventario();
+                        Porao.porao();
+                    
+                    case 5:
+                        mapa.mapaPorao();
                         Porao.porao();
                 }
             }

@@ -86,28 +86,33 @@ public class puzzles {
     static void puzzle2(){
         System.out.println("Parece ser um anagrama...");
         int tentativas=0;
+        
         for (int i = 0; i < 5; i++) {
-        String[][] deepArray = new String[][] {{"aã", "ç"}, {"t", "roi"}};
+        String[][] deepArray = new String[][] {{"ad", "ri"}, {"to", "r"}};
         System.out.println(Arrays.deepToString(deepArray));
        
         System.out.println("O que está escrito?:");
-        String resposta = s.nextLine();
+        String resposta = s.next();
         tentativas++;
         
-        if (resposta.equalsIgnoreCase("TRAIÇÃO")) {
-            System.out.println("Traição? Essa palavra me alguém a cabeça."
+        if (resposta.equalsIgnoreCase("traidor")) {
+            System.out.println("Traidor? Essa palavra me alguém a cabeça."
                     +  " Um dos meus melhores amigos me acusou de ser traidor por não"
-                    + "querer participar de um plano maligno...");
+                    + " querer participar de um plano maligno...");
+                     Quarto.quarto();
+                     break;
         }
         else{
             System.out.println("Não parece ser a palavra...");
         }
        
             }
+        
         if (tentativas==5) {
             System.out.println("POW! POW!");
             System.out.println("Demorou demais para responder e acabou morrendo.");
         }
-       }   
-    }
+        }
+    }   
+    
 

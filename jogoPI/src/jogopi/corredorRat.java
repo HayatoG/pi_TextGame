@@ -7,19 +7,19 @@ public class corredorRat {
         
         System.out.println(" ");//descrição do roteiro sobre o corredor
         if(JogoPI.Chaves == false && JogoPI.Foto == false){
-            System.out.println("\n" + "Você encontrou: Chaves e uma foto.");
+            System.out.println("\n" + "Você encontrou: chaves de um carro e uma foto.");
             JogoPI.Chaves = true;
             JogoPI.Foto = true;
             JogoPI.inventario[2]=JogoPI.chaveCarroInventario;
             JogoPI.inventario[3]=JogoPI.fotoInvetario;
         }
-        System.out.println("\n" + "(1) SALA | (2) COZINHA | (3) QUARTO  | (4) INVENTÁRIO");
+        System.out.println("\n" + "(1) SALA | (2) COZINHA | (3) QUARTO  | (4) INVENTÁRIO | (5) MAPA");
         System.out.println("O que você quer olhar? ");
         int decisao;
         if (s.hasNextInt()) {
             decisao = s.nextInt();
             
-            if (decisao > 4 || decisao < 1) {
+            if (decisao > 5 || decisao < 1) {
                 System.out.println("\n" + "Digite um número válido.");
                 corredorRat.corredor();
             }
@@ -45,13 +45,16 @@ public class corredorRat {
                         }
                         else{
                            puzzles.puzzle2();
-                           Quarto.quarto();
                         }
                     case 4:
                         inventario.inventario();
                         corredorRat.corredor();
+                    
+                    case 5:
+                        mapa.mapaCorredor();
+                        corredorRat.corredor();
                     }
                 }
-            }        
-        }
+            } 
+   }
 }

@@ -12,12 +12,15 @@ public class JogoPI {
     static boolean arma = false;
     static boolean faca = false;
     static boolean puzzled = false;
+    static boolean finalj = false;
+    
     static String lanternaEstante="Lanterna"; //0
     static String chavesInvetario="Chaves"; //5
     static String fotoInvetario="Foto"; //3 
     static String chaveCarroInventario="Chaves do carro"; //2
     static String gazuaCaixas="Gazua"; //1
     static String armaCozinha="Pistola .38"; //4
+    static String nomeJogador="";
     
     static int energiaInimigo = 6;
     static int energiaJogador = 7;
@@ -29,6 +32,6 @@ public class JogoPI {
     
     public static void main(String[] args) {
         telaInicial.telaInicio();
-        //Quarto.quarto();
+
     }
 }

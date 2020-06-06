@@ -26,12 +26,14 @@ public class Batalhas {
                 }    
                     if (energiaJogador <= 0) {
                         System.out.println("FIM DE JOGO");
+                        creditos.creditos();
                     } else {
                         System.out.println("[VICENTE]: Outras pessoas virão para pegar esse projeto.......");
                         s.nextLine();
                         System.out.println("[PABLO]: Uma pena que tenha terminado dessa forma...");
                         s.nextLine();
                         System.out.println("[PABLO]: Isso ja foi longe demais, darei um fim nesses arquivos e encerrarei o projeto. " + "\n" + "**** FIM DE JOGO ****");
+                        creditos.creditos();
                     }
     }
     static void conversarInimigo(){
@@ -50,6 +52,7 @@ public class Batalhas {
 
                 if (decisao == 1) {
                     System.out.println("[ VICENTE FICA COM OS ARQUIVOS E O PROJETO FOI ROUBADO. ]" + "\n" + "FIM DE JOGO");
+                    creditos.creditos();
                 
                 } else {
                     while (energiaInimigo <= 6 && energiaInimigo >= 1 && energiaJogador <= 7 && energiaJogador >= 1) {
@@ -74,9 +77,11 @@ public class Batalhas {
                         System.out.println("[PABLO]: Uma pena que tenha terminado dessa forma...");
                         s.nextLine();
                         System.out.println("[PABLO]: Isso ja foi longe demais, darei um fim nesses arquivos e encerrarei o projeto. " + "\n" + "**** FIM DE JOGO ****");
+                        creditos.creditos();
                     }
                     else{
                         System.out.println("FIM DE JOGO");
+                        creditos.creditos();
                     }
                 }
     }

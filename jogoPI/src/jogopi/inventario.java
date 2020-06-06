@@ -12,6 +12,7 @@ package jogopi;
 public class inventario {
     public static void inventario(){
         int i=0;
+        
         System.out.println("---------INVENTÁRIO---------");
         if (JogoPI.inventario[0] == null) {
         System.out.println("Inventário vazio");
