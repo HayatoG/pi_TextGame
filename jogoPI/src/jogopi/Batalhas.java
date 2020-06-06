@@ -8,22 +8,23 @@ import static jogopi.JogoPI.s;
 public class Batalhas {
     static void atacarInimigo(){
                     while (energiaInimigo <= 6 && energiaInimigo >= 1 && energiaJogador <= 7 && energiaJogador >= 1) {
-                    System.out.println("(1) FACA | (2) ARMA");
-                    int decisao = s.nextInt();
+                        System.out.println("(1) FACA | (2) ARMA");
+                        int decisao = s.nextInt();
 
-                    if (decisao == 1) {
-                        energiaInimigo--;
-                        energiaJogador-= 2;
-                        System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
-                        System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
+                        if (decisao == 1) {
+                            energiaInimigo--;
+                            energiaJogador-= 2;
+                            System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
+                            System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
 
-                    } else {
-                        energiaInimigo -= 3;
-                        energiaJogador -= 2 ;
-                        System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
-                        System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
-                    }
-                }    
+                        } 
+                        else{
+                            energiaInimigo -= 3;
+                            energiaJogador -= 2 ;
+                            System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
+                            System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
+                        }
+                    }    
                     if (energiaJogador <= 0) {
                         System.out.println("FIM DE JOGO");
                         creditos.creditos();
@@ -33,6 +34,7 @@ public class Batalhas {
                         System.out.println("[PABLO]: Uma pena que tenha terminado dessa forma...");
                         s.nextLine();
                         System.out.println("[PABLO]: Isso ja foi longe demais, darei um fim nesses arquivos e encerrarei o projeto. " + "\n" + "**** FIM DE JOGO ****");
+
                         creditos.creditos();
                     }
     }
@@ -81,6 +83,7 @@ public class Batalhas {
                     }
                     else{
                         System.out.println("FIM DE JOGO");
+
                         creditos.creditos();
                     }
                 }
@@ -90,12 +93,16 @@ public class Batalhas {
         do{
             sorte = aleatorio.nextInt(10) + 1;
             System.out.println("*POW*");
+            System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
+            System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
             if(sorte >= 1 && sorte <= 5){
                 System.out.println("(1) - ATIRAR");
                 int atirar = s.nextInt();
                 if(atirar == 1){
                     energiaInimigo -= 2;
                     if(energiaInimigo <= 0){
+                        System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
+                        System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
                         System.out.println("MIROSMAR MORREU, TRISTE!");
                     }
                 }
@@ -103,12 +110,11 @@ public class Batalhas {
             else{
                 energiaJogador -= 2;
                 System.out.println("Droga, ele me acertou!");
+                System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
+                System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
                 if(energiaJogador <= 0){
-                    System.out.println("S E F O D E U");
-                    System.out.println("Você morreu e está retornando ao último ponto do jogo disponível...");
-                    System.out.println("[ENTER] - Para continuar");
-                    s.nextLine();
-                    System.out.println("A sala com o bandido dormindo...");
+                    System.out.println("Sinto muito, você morreu...");
+                    System.out.println("Você morreu e está retornando ao último ponto do jogo disponível (A sala com o bandido dormindo)");
                     Sala.sala();
                 }
             } 
