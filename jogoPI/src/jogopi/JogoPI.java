@@ -13,6 +13,7 @@ public class JogoPI {
     static boolean faca = false;
     static boolean puzzled = false;
     static boolean finalj = false;
+    static boolean salaBatalha = false;
     
     static String lanternaEstante="Lanterna"; //0
     static String chavesInvetario="Chaves"; //5

@@ -1,5 +1,8 @@
 package jogopi;
 import java.util.Scanner;
+import static jogopi.JogoPI.energiaInimigo;
+import static jogopi.JogoPI.energiaJogador;
+
 public class Quarto {
     static void quarto(){
         
@@ -17,13 +20,13 @@ public class Quarto {
 
         if (s.hasNextInt()) {
             int decisao = s.nextInt();
-                int energiaInimigo = 6;
-                int energiaJogador = 7;
-
+                
             if (decisao > 2 || decisao < 1) {
                 System.out.println("Coloque um número válido." + "\n");
             } 
             else if (decisao == 1) {
+                energiaInimigo = 6;
+                energiaJogador = 7;
                 Batalhas.atacarInimigo();
             }
             else {

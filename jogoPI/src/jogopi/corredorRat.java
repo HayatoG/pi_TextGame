@@ -53,8 +53,8 @@ public class corredorRat {
                     case 5:
                         mapa.mapaCorredor();
                         corredorRat.corredor();
-                    }
                 }
-            } 
+            }
+        } 
    }
 }
