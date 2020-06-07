@@ -1,6 +1,7 @@
 package jogopi;
 import java.util.concurrent.TimeUnit;
 import static jogopi.JogoPI.aleatorio;
+import static jogopi.JogoPI.chaveCarroInventario;
 import static jogopi.JogoPI.energiaInimigo;
 import static jogopi.JogoPI.energiaJogador;
 import static jogopi.JogoPI.s;
@@ -20,7 +21,7 @@ public class Sala {
             System.out.println("\nna sala você encontra: ");
             TimeUnit.SECONDS.sleep(3);
             System.out.println("ERVA\n");
-            JogoPI.inventario[6]= JogoPI.ervinhaCura;
+            JogoPI.inventario[4]= JogoPI.ervinhaCura;
             JogoPI.erva=true;
             Sala.sala();
         } 
@@ -49,6 +50,7 @@ public class Sala {
                             TimeUnit.SECONDS.sleep(2);
                             System.out.println("\nTalvez a faca seja útil...");
                             JogoPI.ChaveCarro = true;
+                            JogoPI.inventario[5]=chaveCarroInventario;
                             JogoPI.faca = true;
                             System.out.println("\nDroga! Tem mais um deles!\n");
                             System.out.println("(1) ATIRAR | (2) SE EXPLICAR COM O SEQUESTRADOR");

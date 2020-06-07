@@ -11,7 +11,9 @@ public class Quarto {
 
         System.out.println("[" + JogoPI.nomePlayer + "]" + " Vicente, o que você está fazendo?" + " como pode fazer isso comigo depois de tantos anos juntos?\n");
         TimeUnit.SECONDS.sleep(2);
-        System.out.println("[VICENTE] Você não me deu escolha" + JogoPI.nomePlayer + " Precisava de você para conseguir os arquivos...\n");
+        System.out.println("[VICENTE] Você não me deu escolha " + JogoPI.nomePlayer);
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("Precisava de você para conseguir os arquivos...\n");
         TimeUnit.SECONDS.sleep(2);
         System.out.println("[VICENTE] AGORA NÃO PRECISO MAIS..." + "\n");
         TimeUnit.SECONDS.sleep(2);
@@ -34,7 +36,7 @@ public class Quarto {
             }
         }
     }catch(InterruptedException ie){
-                Thread.currentThread().interrupt();
+            Thread.currentThread().interrupt();
       }
     }
 }

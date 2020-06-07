@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class JogoPI {
     static boolean Itens = false;
     static boolean Lanterna=false;
-    static boolean Chaves=false;
+    
     static boolean Foto=false;
     static boolean ChaveCarro=false;
     static boolean gazua = false;
@@ -15,19 +15,18 @@ public class JogoPI {
     static boolean finalj = false;
     static boolean salaBatalha = false;
     static boolean erva = false;
-    
+        
     static boolean inicio = false;
     static boolean porao = false;
     static boolean corredor = false;
     
     static String lanternaEstante="Lanterna"; //0
-    static String chavesInvetario="Chaves"; //5
     static String fotoInvetario="Foto"; //3 
     static String chaveCarroInventario="Chaves do carro"; //2
     static String gazuaCaixas="Gazua"; //1
     static String armaCozinha="Revólver .38"; //4
     static String nomeJogador="";
-    static String ervinhaCura="Erva da cura"; //6
+    static String ervinhaCura="Erva da cura"; //5
     static String nomePlayer="";
   
     
@@ -41,6 +40,6 @@ public class JogoPI {
     
     public static void main(String[] args) {
         telaInicial.telaInicio();
-
+        
     }
 }
