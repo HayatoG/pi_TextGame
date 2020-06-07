@@ -15,18 +15,24 @@ public class JogoPI {
     static boolean finalj = false;
     static boolean salaBatalha = false;
     static boolean erva = false;
-        
+    
+    static boolean inicio = false;
+    static boolean porao = false;
+    static boolean corredor = false;
+    
     static String lanternaEstante="Lanterna"; //0
     static String chavesInvetario="Chaves"; //5
     static String fotoInvetario="Foto"; //3 
     static String chaveCarroInventario="Chaves do carro"; //2
     static String gazuaCaixas="Gazua"; //1
-    static String armaCozinha="Pistola .38"; //4
+    static String armaCozinha="Revólver .38"; //4
     static String nomeJogador="";
-    static String ervinhaCura="Erva da cura";
+    static String ervinhaCura="Erva da cura"; //6
+    static String nomePlayer="";
+  
     
     static int energiaInimigo = 6;
-    static int energiaJogador = 7;
+    static int energiaJogador = 6;
     
     static Scanner s = new Scanner(System.in);
     static Random aleatorio = new Random();

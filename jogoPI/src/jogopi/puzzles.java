@@ -1,17 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package jogopi;
-
 import java.util.Arrays;
 import static jogopi.JogoPI.s;
 
-/**
- *
- * @author olive
- */
 public class puzzles {
             
     static void puzzle1(){
@@ -84,7 +74,7 @@ public class puzzles {
     }
     
     static void puzzle2(){
-        System.out.println("Parece ser um anagrama...");
+        System.out.println("\nParece ser um anagrama...");
         int tentativas=0;
         
         for (int i = 0; i < 5; i++) {
@@ -96,9 +86,9 @@ public class puzzles {
         tentativas++;
         
         if (resposta.equalsIgnoreCase("traidor")) {
-            System.out.println("Traidor? Essa palavra me alguém a cabeça."
-                    +  " Um dos meus melhores amigos me acusou de ser traidor por não"
-                    + " querer participar de um plano maligno...");
+            System.out.println("\nTraidor? Essa palavra me alguém a cabeça."
+                    +  " Um dos meus melhores amigos me acusou de ser traidor por não\n"
+                    + "querer participar de um plano maligno...\n");
                      Quarto.quarto();
                      break;
         }
@@ -110,7 +100,7 @@ public class puzzles {
         
         if (tentativas==5) {
             System.out.println("POW! POW!");
-            System.out.println("Demorou demais para responder e acabou morrendo.");
+            System.out.println("\nDemorou demais para responder e acabou morrendo.");
         }
         }
     }   

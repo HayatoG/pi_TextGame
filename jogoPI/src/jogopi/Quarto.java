@@ -1,21 +1,22 @@
 package jogopi;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 import static jogopi.JogoPI.energiaInimigo;
 import static jogopi.JogoPI.energiaJogador;
 
 public class Quarto {
     static void quarto(){
-        
+        try{
         Scanner s = new Scanner(System.in);
 
-        System.out.println("[PABLO]: Vicente, o que você está fazendo?" + "\n" + "Como pode fazer isso comigo depois de tantos anos juntos?");
-        s.nextLine();
-        System.out.println("[VICENTE]: Você não me deu escolha Pablo." + "\n" + "Precisava de você para conseguir os arquivos...");
-        s.nextLine();
-        System.out.println("[VICENTE]: AGORA NÃO PRECISO MAIS..." + "\n");
-
-        System.out.println("(1) ATACAR | (2) CONVERSAR");
+        System.out.println("[" + JogoPI.nomePlayer + "]" + " Vicente, o que você está fazendo?" + " como pode fazer isso comigo depois de tantos anos juntos?\n");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("[VICENTE] Você não me deu escolha" + JogoPI.nomePlayer + " Precisava de você para conseguir os arquivos...\n");
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println("[VICENTE] AGORA NÃO PRECISO MAIS..." + "\n");
+        TimeUnit.SECONDS.sleep(2);
         
+        System.out.println("(1) ATACAR | (2) CONVERSAR");
 
         if (s.hasNextInt()) {
             int decisao = s.nextInt();
@@ -25,15 +26,19 @@ public class Quarto {
             } 
             else if (decisao == 1) {
                 energiaInimigo = 6;
-                energiaJogador = 7;
+                energiaJogador = 6;
                 Batalhas.atacarInimigo();
             }
             else {
                 Batalhas.conversarInimigo();
             }
         }
+    }catch(InterruptedException ie){
+                Thread.currentThread().interrupt();
+      }
     }
 }
+    
 
     
     

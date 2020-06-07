@@ -1,4 +1,5 @@
 package jogopi;
+import java.util.concurrent.TimeUnit;
 import static jogopi.JogoPI.aleatorio;
 import static jogopi.JogoPI.energiaInimigo;
 import static jogopi.JogoPI.energiaJogador;
@@ -7,17 +8,19 @@ import static jogopi.JogoPI.s;
 public class Sala {
 
     static void sala(){
-        //Colocar validação caso o usuário coloque String
-        //sala
+        try{
         
         if(JogoPI.salaBatalha == true){
-            System.out.println("Resta apenas este bandido morto aqui...");
+            System.out.println("\nResta apenas este morto aqui...");
             corredorRat.corredor();
         }
         else if (JogoPI.erva == false){
             System.out.println("Um deles está dormindo...");
-            System.out.println("Olha, uma erva! Vou guardar, talvez seja útil.");
-            JogoPI.inventario[1]= JogoPI.ervinhaCura;
+            TimeUnit.SECONDS.sleep(2);
+            System.out.println("\nna sala você encontra: ");
+            TimeUnit.SECONDS.sleep(3);
+            System.out.println("ERVA\n");
+            JogoPI.inventario[6]= JogoPI.ervinhaCura;
             JogoPI.erva=true;
             Sala.sala();
         } 
@@ -34,34 +37,31 @@ public class Sala {
                 else{
                     switch(decisao){
                         case 1:
+                            System.out.println("*POW!*POW!*");
+                            TimeUnit.SECONDS.sleep(3);
                             System.out.println("Sequestrador morto...");
-                            s.nextLine();
-                            System.out.println("Encontrei uma chave de carro e essa faca.");
-                            System.out.println("Talvez a faca seja útil.");
+                            TimeUnit.SECONDS.sleep(2);
+                            System.out.println("\nno sequestrador você encontra:");
+                            TimeUnit.SECONDS.sleep(3);
+                            System.out.println("\nFACA");
+                            TimeUnit.SECONDS.sleep(2);
+                            System.out.println("\nCHAVE DO CARRO");
+                            TimeUnit.SECONDS.sleep(2);
+                            System.out.println("\nTalvez a faca seja útil...");
                             JogoPI.ChaveCarro = true;
                             JogoPI.faca = true;
-                            System.out.println("Droga! Tem mais!?");
+                            System.out.println("\nDroga! Tem mais um deles!\n");
                             System.out.println("(1) ATIRAR | (2) SE EXPLICAR COM O SEQUESTRADOR");
                             int segundadecisao = s.nextInt();
                             if(segundadecisao == 1){
                                 Batalhas.atirarInimigo();
                                 JogoPI.salaBatalha=true;
                                 JogoPI.puzzled=true;
-                                System.out.println("Certo, Só me sobrou esse quarto...");
+                                System.out.println("Certo, agora posso ir no quarto...");
                                 corredorRat.corredor();
                             }
                             else if(segundadecisao == 2){
-                                System.out.println("[DIALOGO DA EXPLICAÇÃO]");
-                                System.out.println("[ENTER] - Para continuar.");
-                                s.nextLine();
-                                JogoPI.puzzled=true;
-                                JogoPI.salaBatalha=true;
-                                System.out.println("Certo, agora vamos pro quarto...");
-                                System.out.println("[ENTER] - Para continuar.");
-                                s.nextLine();
-                                System.out.println("Ele deve estar lá nos esperando...");
-                                System.out.println("[ENTER] - Para continuar.");
-                                s.nextLine();
+                                roteiro.salaConversa();
                                 corredorRat.corredor();
                             }
                             else{
@@ -75,6 +75,9 @@ public class Sala {
                 }
             }
         }
-    }
+    } catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
+        }
+   }
 }
 

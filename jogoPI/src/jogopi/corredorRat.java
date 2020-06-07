@@ -1,11 +1,11 @@
 package jogopi;
-
+import java.util.concurrent.TimeUnit;
 import static jogopi.JogoPI.s;
 
 public class corredorRat {
     public static void corredor(){
-        
-        System.out.println(" ");//descrição do roteiro sobre o corredor
+        try{
+        roteiro.verificacao2();
         if(JogoPI.Chaves == false && JogoPI.Foto == false){
             System.out.println("\n" + "Você encontrou: chaves de um carro e uma foto.");
             JogoPI.Chaves = true;
@@ -27,20 +27,29 @@ public class corredorRat {
                 switch(decisao){
                     case 1:
                         if (JogoPI.arma==false) {
-                            System.out.println("\n" + "Ouço gente lá dentro não vou entrar");
+                            System.out.println("\n" + "Ouço pessoas do outro lado da porta. Pode ser quem \n"
+                                    + "me sequestrou.");
+                            TimeUnit.SECONDS.sleep(3);
+                            System.out.println("\nMas estou desarmado não vou correr o risco.");
                             corredorRat.corredor();
                         }
                         else{
                             Sala.sala();
                         }
                     case 2:
-                        System.out.println("Na cozinha você encontra: Um révolver .38");
+                        System.out.println("Você se esgueira pela porta da cozinha aberta para ver se não tem ninguém\n");
+                         TimeUnit.SECONDS.sleep(3);
+                         System.out.println("Não tem ninguém. Você vê uma cozinha velha, típica de uma casa de campo.\n"
+                                 + "As gavetas estão abertas.\n");
+                        System.out.println("Na cozinha você encontra:");
+                        TimeUnit.SECONDS.sleep(3);
+                        System.out.println("REVOLVER CALIBRE .38");
                         JogoPI.inventario[4]=JogoPI.armaCozinha;
                         JogoPI.arma=true;
                         corredorRat.corredor();
                     case 3:
                         if (JogoPI.puzzled==false) {
-                            System.out.println("Não consigo fazer abri-la com esses caras na sala.");
+                            System.out.println("Ouço pessoas na sala. Estaria me arriscando ao tentar abrir essa porta");
                             corredorRat.corredor();
                         }
                         else{
@@ -56,5 +65,8 @@ public class corredorRat {
                 }
             }
         } 
-   }
+   }catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
+        }
+    }
 }

@@ -1,14 +1,17 @@
 package jogopi;
 
+import java.util.concurrent.TimeUnit;
 import static jogopi.JogoPI.s;
 
 public class Porao {
     static void porao(){
+        try{
         if (JogoPI.nomeJogador.isEmpty()) {
         System.out.println("INSIRA SEU NOME:");
         JogoPI.nomeJogador= s.next();
-       String nomePlayer = JogoPI.nomeJogador.toUpperCase();
+        JogoPI.nomePlayer = JogoPI.nomeJogador.toUpperCase();
         }
+        roteiro.verificacao1();
        
         if (JogoPI.Itens == false) {
             System.out.println("\n" +"(1) CAIXAS | (2) PORTA | (3) ESTANTE  ");
@@ -29,7 +32,10 @@ public class Porao {
                 switch(decisão){
                     case 1:
                         if (JogoPI.Lanterna==true) {
-                            System.out.println("\n" + "Conseguindo enxergar melhor com a lanterna você encontra uma gazua"+ "\n");
+                            System.out.println("\n" + "Conseguindo enxergar melhor com a lanterna \n"
+                                    + "você encontra: ");
+                            TimeUnit.SECONDS.sleep(3);
+                            System.out.print("GAZUA\n");
                             JogoPI.inventario[1]= JogoPI.gazuaCaixas;
                             JogoPI.gazua=true;
                             JogoPI.Itens=true;
@@ -46,7 +52,8 @@ public class Porao {
                         Porao.porao();    
                         }
                         else{
-                            System.out.println("\n" + "Você tenta decifrar em como abrir a porta com a gazua"+ "\n");
+                            System.out.println("\n" + "Hmm, interessante... posso usar a gazua \npara abrir essa porta"+ "\n");
+                            TimeUnit.SECONDS.sleep(2);
                              puzzles.puzzle1();
                         }
                     case 3:
@@ -57,7 +64,9 @@ public class Porao {
                         JogoPI.inventario[0]= JogoPI.lanternaEstante;
                         JogoPI.Lanterna=true;
                         JogoPI.Itens=true;
-                        System.out.println("\n" + "Você encontrou a lanterna" + "\n");
+                        System.out.println("\n" + "Você encontrou: " );
+                        TimeUnit.SECONDS.sleep(3);
+                            System.out.println("LANTERNA");
                         Porao.porao();
                         }
                     case 4:
@@ -74,5 +83,8 @@ public class Porao {
             System.out.println("\n" + "Opção inválida." + "\n");
             Porao.porao();
         }
-    } 
+    } catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
+        }
+  } 
 }
