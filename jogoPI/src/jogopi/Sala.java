@@ -14,9 +14,15 @@ public class Sala {
             System.out.println("Resta apenas este bandido morto aqui...");
             corredorRat.corredor();
         }
-        else{
+        else if (JogoPI.erva == false){
             System.out.println("Um deles está dormindo...");
-            System.out.println("(1) ATIRAR");
+            System.out.println("Olha, uma erva! Vou guardar, talvez seja útil.");
+            JogoPI.inventario[1]= JogoPI.ervinhaCura;
+            JogoPI.erva=true;
+            Sala.sala();
+        } 
+        else {
+            System.out.println("(1) ATIRAR | (2) INVENTÁRIO");
 
             if(s.hasNextInt()){
             int decisao = s.nextInt();
@@ -34,7 +40,6 @@ public class Sala {
                             System.out.println("Talvez a faca seja útil.");
                             JogoPI.ChaveCarro = true;
                             JogoPI.faca = true;
-                        case 2:
                             System.out.println("Droga! Tem mais!?");
                             System.out.println("(1) ATIRAR | (2) SE EXPLICAR COM O SEQUESTRADOR");
                             int segundadecisao = s.nextInt();
@@ -43,8 +48,6 @@ public class Sala {
                                 JogoPI.salaBatalha=true;
                                 JogoPI.puzzled=true;
                                 System.out.println("Certo, Só me sobrou esse quarto...");
-                                System.out.println("[ENTER] - Para continuar.");
-                                s.nextLine();
                                 corredorRat.corredor();
                             }
                             else if(segundadecisao == 2){
@@ -65,9 +68,13 @@ public class Sala {
                                 System.out.println("Digite um número válido!!");
                                 decisao = 2;
                             }
+                        case 2:
+                            inventario.inventario();
+                            Sala.sala();
                     }
                 }
             }
         }
     }
 }
+

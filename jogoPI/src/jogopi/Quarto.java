@@ -8,7 +8,6 @@ public class Quarto {
         
         Scanner s = new Scanner(System.in);
 
-
         System.out.println("[PABLO]: Vicente, o que você está fazendo?" + "\n" + "Como pode fazer isso comigo depois de tantos anos juntos?");
         s.nextLine();
         System.out.println("[VICENTE]: Você não me deu escolha Pablo." + "\n" + "Precisava de você para conseguir os arquivos...");

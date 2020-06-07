@@ -8,7 +8,7 @@ import static jogopi.JogoPI.s;
 public class Batalhas {
     static void atacarInimigo(){
                     while (energiaInimigo <= 6 && energiaInimigo >= 1 && energiaJogador <= 7 && energiaJogador >= 1) {
-                        System.out.println("(1) FACA | (2) ARMA");
+                        System.out.println("(1) FACA | (2) ARMA | (3) INVENTÁRIO");
                         int decisao = s.nextInt();
 
                         if (decisao == 1) {
@@ -18,11 +18,14 @@ public class Batalhas {
                             System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
 
                         } 
-                        else{
+                        else if (decisao == 2){
                             energiaInimigo -= 3;
                             energiaJogador -= 2 ;
                             System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
                             System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
+                        }
+                        else {
+                            inventario.inventario();
                         }
                     }    
                     if (energiaJogador <= 0) {
@@ -58,7 +61,7 @@ public class Batalhas {
                 
                 } else {
                     while (energiaInimigo <= 6 && energiaInimigo >= 1 && energiaJogador <= 7 && energiaJogador >= 1) {
-                        System.out.println("(1) FACA | (2) CHUTE");
+                        System.out.println("(1) FACA | (2) CHUTE | (3) INVENTÁRIO");
                         decisao = s.nextInt();
                         
                         if (decisao == 1){
@@ -67,11 +70,14 @@ public class Batalhas {
                              System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
                              System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
                         }
-                        else{
+                        else if (decisao == 2){
                             energiaInimigo--;
                             energiaJogador-=2;
                             System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
                             System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
+                        }
+                        else{
+                            inventario.inventario();
                         }
                     }    
                     
@@ -96,14 +102,27 @@ public class Batalhas {
             System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
             System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
             if(sorte >= 1 && sorte <= 5){
-                System.out.println("(1) - ATIRAR");
-                int atirar = s.nextInt();
-                if(atirar == 1){
+                System.out.println("(1) - ATIRAR | (2) - INVENTÁRIO");
+                int decisao = s.nextInt();
+                if(decisao == 1){
                     energiaInimigo -= 2;
                     if(energiaInimigo <= 0){
                         System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
                         System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "7 " + "--");
                         System.out.println("MIROSMAR MORREU, TRISTE!");
+                    }
+                }
+                else if (decisao == 2){
+                    inventario.inventario();
+                    System.out.println("Deseja usar a erva para recuperar sua energia?");
+                    System.out.println("(1) SIM | (2) NÃO");
+                    int erva = s.nextInt();
+                    if(erva == 1){
+                        energiaJogador += 2;
+                        System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "7 " + "--");
+                    }
+                    else {
+                        atirarInimigo();
                     }
                 }
             }

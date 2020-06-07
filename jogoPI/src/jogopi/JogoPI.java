@@ -14,7 +14,8 @@ public class JogoPI {
     static boolean puzzled = false;
     static boolean finalj = false;
     static boolean salaBatalha = false;
-    
+    static boolean erva = false;
+        
     static String lanternaEstante="Lanterna"; //0
     static String chavesInvetario="Chaves"; //5
     static String fotoInvetario="Foto"; //3 
@@ -22,6 +23,7 @@ public class JogoPI {
     static String gazuaCaixas="Gazua"; //1
     static String armaCozinha="Pistola .38"; //4
     static String nomeJogador="";
+    static String ervinhaCura="Erva da cura";
     
     static int energiaInimigo = 6;
     static int energiaJogador = 7;
