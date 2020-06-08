@@ -15,11 +15,11 @@ public class telaInicial {
 "                             \n" +
 "");
          TimeUnit.SECONDS.sleep(4);
+         
         } 
          catch (InterruptedException ie) {
         Thread.currentThread().interrupt();
         }
-                
                 
                 
         System.out.println(" ________  ________  _________        ___       ________  ________     \n" +
@@ -31,7 +31,7 @@ public class telaInicial {
                 "    \\|__|\\|__|\\|__|\\|__|    \\|__|        \\|_______|\\|__|\\|__|\\|_______|");   
         System.out.println("\n");
         System.out.println("Pressione [ENTER] para continuar...");
-        s.nextLine();
+        musicasPI.toca();
         Porao.porao();
     }
 }
