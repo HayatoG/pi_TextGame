@@ -50,7 +50,7 @@ public class roteiro {
         try{
            System.out.println("[" + JogoPI.nomePlayer + "]" + " Jogue sua arma no chão!\n");
                                 TimeUnit.SECONDS.sleep(2);
-                                System.out.println("[RAMON]" + "Jogue você primeiro! você acabou de matar o MIROSMAR\n");
+                                System.out.println("[RAMON]" + " Jogue você primeiro! você acabou de matar o MIROSMAR\n");
                                  TimeUnit.SECONDS.sleep(2);
                                  System.out.println("[" + JogoPI.nomePlayer + "]" + " Se eu abaixar você também abaixa?!\n");
                                  TimeUnit.SECONDS.sleep(2);
@@ -93,12 +93,10 @@ public class roteiro {
             TimeUnit.SECONDS.sleep(5);
             JogoPI.corredor=true;
             
-        }catch(InterruptedException ie){
+        }
+        catch(InterruptedException ie){
                 Thread.currentThread().interrupt();
-      }
-            
-        
+        }
     }
-    
 }
 

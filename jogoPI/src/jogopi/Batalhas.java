@@ -33,14 +33,14 @@ public class Batalhas {
                             int erva = s.nextInt();
                             if(erva == 1){
                                 energiaJogador += 2;
-                                System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--");
+                                System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
                             }else {
                                 Batalhas.atacarInimigo();
                             }
                         }
                     }    
                     if (energiaJogador <= 0) {
-                        System.out.println("FIM DE JOGO");
+                        System.out.println("FIM DE JOGO\n");
                         System.out.println("Você morreu e está retornando ao último ponto do jogo disponível..\n");
                         TimeUnit.SECONDS.sleep(3);
                         System.out.println("O quarto, na conversa com Vincente.\n");
@@ -51,7 +51,7 @@ public class Batalhas {
                         TimeUnit.SECONDS.sleep(2);
                         System.out.println("[" + JogoPI.nomePlayer + "]" + " Uma pena que tenha que terminar assim.\n");
                         TimeUnit.SECONDS.sleep(2);
-                        System.out.println("[" + JogoPI.nomePlayer + "]" + " Isso ja foi longe demais, darei um fim nesses arquivos e encerrarei o projeto.");
+                        System.out.println("[" + JogoPI.nomePlayer + "]" + " Isso ja foi longe demais, darei um fim nesses arquivos e encerrarei o projeto.\n");
                         TimeUnit.SECONDS.sleep(3);
                         creditos.creditos();
                     }
@@ -78,11 +78,11 @@ public class Batalhas {
                     System.out.println("[ VICENTE FICA COM OS ARQUIVOS E O PROJETO FOI ROUBADO. ]" + "\n" + "FIM DE JOGO");
                     creditos.creditos();
                 
-                } else {
-                    int decisaoLuta = s.nextInt();
+                } else if (decisao == 2){
+                    int decisaoLuta;
                     while (energiaInimigo <= 6 && energiaInimigo >= 1 && energiaJogador <= 6 && energiaJogador >= 1) {
                         System.out.println("(1) FACA | (2) CHUTE | (3) INVENTÁRIO");
-                                                
+                        decisaoLuta = s.nextInt();
                         if (decisaoLuta == 1){
                              energiaInimigo-= 3;
                              energiaJogador-= 2 ;
@@ -102,7 +102,7 @@ public class Batalhas {
                             int erva = s.nextInt();
                             if(erva == 1){
                                 energiaJogador += 2;
-                                System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--");
+                                System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
                             }else {
                                 decisao = 2;
                             }
@@ -117,7 +117,7 @@ public class Batalhas {
                         creditos.creditos();
                     }
                     else{
-                        System.out.println("FIM DE JOGO");
+                        System.out.println("\nFIM DE JOGO");
                         creditos.creditos();
                     }
                     
