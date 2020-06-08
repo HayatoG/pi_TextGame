@@ -53,7 +53,7 @@ public class roteiro {
                                 System.out.println("[RAMON]" + " Jogue você primeiro! você acabou de matar o MIROSMAR\n");
                                  TimeUnit.SECONDS.sleep(2);
                                  System.out.println("[" + JogoPI.nomePlayer + "]" + " Se eu abaixar você também abaixa?!\n");
-                                 TimeUnit.SECONDS.sleep(2);
+                                 TimeUnit.SECONDS.sleep(4);
                                 System.out.println("[RAMON]" + " As calças?????\n");
                                 TimeUnit.SECONDS.sleep(2);
                                 System.out.println("[" + JogoPI.nomePlayer + "]" + " Não né burro! a arma. Vamos abaixar ao mesmo tempo\n");
@@ -65,16 +65,12 @@ public class roteiro {
                                 System.out.println("[" + JogoPI.nomePlayer + "]" + "Estou trabalhando em um projeto para salvar o mundo.\n"
                                         + "Um antigo colega tinha intenções maliciosas com esse mesmo projeto. Tenho que sair imediatamente.\n"
                                         + "Cada segundo que passamos aqui é uma perda de tempo. Preciso da sua ajuda.\n");
-                                TimeUnit.SECONDS.sleep(3);
+                                TimeUnit.SECONDS.sleep(5);
                                 System.out.println("[RAMON]" + " Salvar o mundo? nessas condições? eu bem que gostaria que fosse verdade."
-                                        + "Mas acho que devo te dar esse voto de confiança...\n");
+                                        + "\nMas acho que devo te dar esse voto de confiança...\n");
                                 JogoPI.puzzled=true;
                                 JogoPI.salaBatalha=true;
                                 System.out.println("[" + JogoPI.nomePlayer + "]" + " Certo, agora vamos pro quarto...\n");
-                                TimeUnit.SECONDS.sleep(2);
-                                System.out.println("[RAMON]" + " De novo esse papo cara? não curto...\n");
-                                TimeUnit.SECONDS.sleep(2);
-                                System.out.println("[" + JogoPI.nomePlayer + "]" + " Para de besteira cara! eu ouvi algo no quarto.\n");
                                 TimeUnit.SECONDS.sleep(2);
             
         }catch(InterruptedException ie){

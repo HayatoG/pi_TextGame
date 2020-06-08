@@ -47,7 +47,7 @@ public class corredorRat {
                         corredorRat.corredor();
                     case 3:
                         if (JogoPI.puzzled==false) {
-                            System.out.println("Ouço pessoas na sala. Estaria me arriscando ao tentar abrir essa porta");
+                            System.out.println("\nOuço pessoas na sala. Estaria me arriscando ao tentar abrir essa porta");
                             corredorRat.corredor();
                         }
                         else{

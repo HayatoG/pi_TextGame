@@ -1,11 +1,12 @@
 package jogopi;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 import static jogopi.JogoPI.s;
 
 public class puzzles {
             
     static void puzzle1(){
-            
+             try{
         System.out.println("  ___          _   _          _           ___  \n" +
         " |  _|  ____  | | | |  ____  | |  ____   |_  | \n" +
         " / |   [____] | | | | [____] | | [____]    | \\ \n" +
@@ -33,9 +34,8 @@ public class puzzles {
                 case 2:
                 case 3:
                 case 4:
-                    System.out.println("\n" + "Falha!");
+                    System.out.println("\n" + "Droga! emperrou!");
                     puzzle1();
-                    //dar uns thread.sleep aqui
                 case 5:
                     System.out.println("  ___          _   _          _           ___  \n" +
                             " |  _|  ____  | | | |  ____  | |  ____   |_  | \n" +
@@ -43,25 +43,30 @@ public class puzzles {
                             " \\ |_         | | | |        | |          _| / \n" +
                             " |___|        |_| |_|        |_|         |___| \n" +
                             "                                               " + "\n");
+                    TimeUnit.SECONDS.sleep(2);
                     System.out.println("  ___          _   _                         ___  \n" +
                             " |  _|  ____  | | | |  ____   ____   ____   |_  | \n" +
                             " / |   [____] | | | | [____] [____] [____]    | \\ \n" +
                             " \\ |_         | | | |                        _| / \n" +
                             " |___|        |_| |_|                       |___| \n" +
                             "                                                  " + "\n");
+                    TimeUnit.SECONDS.sleep(2);
                     System.out.println("  ___                 _                         ___  \n" +
                             " |  _|  ____   ____  | |  ____   ____   ____   |_  | \n" +
                             " / |   [____] [____] | | [____] [____] [____]    | \\ \n" +
                             " \\ |_                | |                        _| / \n" +
                             " |___|               |_|                       |___| \n" +
                             "                                                     " + "\n");
+                    TimeUnit.SECONDS.sleep(2);
                     System.out.println(" ___                                              ___  \n" +
                             " |  _|  ____   ____   ____   ____   ____   ____   |_  | \n" +
                             " / |   [____] [____] [____] [____] [____] [____]    | \\ \n" +
                             " \\ |_                                              _| / \n" +
                             " |___|                                            |___| \n" +
                             "                                                        " + "\n");
+                    TimeUnit.SECONDS.sleep(2);
                     System.out.println("\n" + "Você destravou a porta!");
+                    TimeUnit.SECONDS.sleep(2);
                     System.out.println("\n" + "Entrando no corredor...");
                     corredorRat.corredor();
             }
@@ -71,10 +76,13 @@ public class puzzles {
             System.out.println("\n" + "Digite uma posição válida.");
             puzzle1();
         }
+        }catch(InterruptedException ie){
+                Thread.currentThread().interrupt();
+      }
     }
     
     static void puzzle2(){
-        System.out.println("\nParece ser um anagrama...");
+        System.out.println("\nParece ser um anagrama neste cadeado. Qual poderia ser a palavra?");
         int tentativas=0;
         
         for (int i = 0; i < 5; i++) {

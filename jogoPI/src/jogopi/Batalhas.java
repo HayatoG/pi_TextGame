@@ -75,7 +75,8 @@ public class Batalhas {
                 int decisao = s.nextInt();
 
                 if (decisao == 1) {
-                    System.out.println("[ VICENTE FICA COM OS ARQUIVOS E O PROJETO FOI ROUBADO. ]" + "\n" + "FIM DE JOGO");
+                    System.out.println("[ VICENTE FICA COM OS ARQUIVOS E O PROJETO FOI ROUBADO. ]" + "\n" + "O mundo agora "
+                            + "sofrerá nas mãos tirânicas de Vincente.\nA humanidade está condenada a nova ordem mundial.");
                     creditos.creditos();
                 
                 } else if (decisao == 2){

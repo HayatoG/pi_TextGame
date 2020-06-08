@@ -67,6 +67,8 @@ public class Porao {
                         System.out.println("\n" + "Você encontrou: " );
                         TimeUnit.SECONDS.sleep(3);
                             System.out.println("LANTERNA");
+                            TimeUnit.SECONDS.sleep(2);
+                            System.out.println("\nMAPA");
                         Porao.porao();
                         }
                     case 4:

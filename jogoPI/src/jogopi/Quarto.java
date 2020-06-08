@@ -8,7 +8,7 @@ public class Quarto {
     static void quarto(){
         try{
         Scanner s = new Scanner(System.in);
-
+        TimeUnit.SECONDS.sleep(3);
         System.out.println("[" + JogoPI.nomePlayer + "]" + " Vicente, o que você está fazendo?" + " como pode fazer isso comigo depois de tantos anos juntos?\n");
         TimeUnit.SECONDS.sleep(2);
         System.out.println("[VICENTE] Você não me deu escolha " + JogoPI.nomePlayer);

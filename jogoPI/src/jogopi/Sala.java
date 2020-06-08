@@ -16,7 +16,7 @@ public class Sala {
             corredorRat.corredor();
         }
         else if (JogoPI.erva == false){
-            System.out.println("Um deles está dormindo...");
+            System.out.println("\nUm deles está dormindo...");
             TimeUnit.SECONDS.sleep(2);
             System.out.println("\nna sala você encontra: ");
             TimeUnit.SECONDS.sleep(3);
