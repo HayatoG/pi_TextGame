@@ -61,6 +61,8 @@ public class Batalhas {
     }
     static void conversarInimigo(){
         try{
+                energiaInimigo = 6;
+                energiaJogador = 6;
                 System.out.println("[" + JogoPI.nomePlayer + "]" + " Calma Vicente, podemos conversar e acertar as coisas, você precisa de dinheiro?" + "\n");
                 TimeUnit.SECONDS.sleep(3);
                 System.out.println("[VICENTE] Dinheiro nunca foi o problema. Eu quero controle e com você fora do meu caminho tudo ficará mais fácil!\n");
@@ -117,10 +119,10 @@ public class Batalhas {
                         TimeUnit.SECONDS.sleep(3);
                         creditos.creditos();
                     }
-                    else{
+                    /*else{
                         System.out.println("\nFIM DE JOGO");
                         creditos.creditos();
-                    }
+                    }*/
                     
                 }
         }catch(InterruptedException ie){
@@ -138,7 +140,7 @@ public class Batalhas {
             System.out.println("\nENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
             System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "6 " + "--\n");
             if(sorte >= 1 && sorte <= 5){
-                System.out.println("(1) - ATIRAR | (2) - INVENTÁRIO");
+                System.out.println("(1) ATIRAR | (2) INVENTÁRIO");
                 int decisao = s.nextInt();
                 if(decisao == 1){
                     energiaInimigo -= 2;

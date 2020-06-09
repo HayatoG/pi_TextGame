@@ -40,5 +40,6 @@ public class JogoPI {
     
     public static void main(String[] args) {
         telaInicial.telaInicio();
+        //Batalhas.conversarInimigo();
     }
 }

@@ -18,7 +18,7 @@ public class Sala {
         else if (JogoPI.erva == false){
             System.out.println("\nUm deles está dormindo...");
             TimeUnit.SECONDS.sleep(2);
-            System.out.println("\nna sala você encontra: ");
+            System.out.println("\nVocê encontrou: ");
             TimeUnit.SECONDS.sleep(3);
             System.out.println("ERVA\n");
             JogoPI.inventario[4]= JogoPI.ervinhaCura;
@@ -38,22 +38,24 @@ public class Sala {
                 else{
                     switch(decisao){
                         case 1:
-                            System.out.println("*POW!*POW!*");
+                            System.out.println("*POW!*");
+                            TimeUnit.SECONDS.sleep(1);
+                            System.out.println("*POW!*");
                             TimeUnit.SECONDS.sleep(3);
                             System.out.println("Sequestrador morto...");
                             TimeUnit.SECONDS.sleep(2);
-                            System.out.println("\nno sequestrador você encontra:");
+                            System.out.println("\nCom o sequestrador você encontrou:");
                             TimeUnit.SECONDS.sleep(3);
                             System.out.println("\nFACA");
                             TimeUnit.SECONDS.sleep(2);
-                            System.out.println("\nCHAVE DO CARRO");
+                            System.out.println("CHAVE DO CARRO");
                             TimeUnit.SECONDS.sleep(2);
                             System.out.println("\nTalvez a faca seja útil...");
                             JogoPI.ChaveCarro = true;
                             JogoPI.inventario[5]=chaveCarroInventario;
                             JogoPI.faca = true;
                             System.out.println("\nDroga! Tem mais um deles!\n");
-                            System.out.println("(1) ATIRAR | (2) SE EXPLICAR COM O SEQUESTRADOR");
+                            System.out.println("(1) ATIRAR | (2) CONVERSAR ");
                             int segundadecisao = s.nextInt();
                             if(segundadecisao == 1){
                                 Batalhas.atirarInimigo();
