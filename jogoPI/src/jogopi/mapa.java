@@ -1,11 +1,11 @@
 package jogopi;
 public class mapa {
         static void mapaPorao(){
-        System.out.println("Você está no: PORÃO");
+        System.out.println("\nVocê está no: PORÃO");
         Porao.porao();
     }
         static void mapaCorredor(){
-        System.out.println("você está no: CORREDOR");
+        System.out.println("\nVocê está no: CORREDOR");
         corredorRat.corredor();
     }
     

@@ -85,8 +85,8 @@ public class puzzles {
         System.out.println("\nParece ser um anagrama neste cadeado. Qual poderia ser a palavra?");
         int tentativas=0;
         
-        for (int i = 0; i < 5; i++) {
-        String[][] deepArray = new String[][] {{"ad", "ri"}, {"to", "r"}};
+        for (int i = 0; i < 10; i++) {
+        String[][] deepArray = new String[][] {{"to", "rr"}, {"i", "da"}};
         System.out.println(Arrays.deepToString(deepArray));
        
         System.out.println("O que está escrito?:");
@@ -105,11 +105,6 @@ public class puzzles {
         }
        
             }
-        
-        if (tentativas==5) {
-            System.out.println("POW! POW!");
-            System.out.println("\nDemorou demais para responder e acabou morrendo.");
-        }
         }
     }   
     

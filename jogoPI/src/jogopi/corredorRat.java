@@ -7,7 +7,7 @@ public class corredorRat {
         try{
         roteiro.verificacao2();
         if(JogoPI.Foto == false){
-            System.out.println("\n" + "Você encontrou: Uma foto.");
+            System.out.println("\n" + "Você encontrou: FOTO");
             JogoPI.Foto = true;
             JogoPI.inventario[2]=JogoPI.fotoInvetario;
         }
@@ -35,8 +35,8 @@ public class corredorRat {
                             Sala.sala();
                         }
                     case 2:
-                        System.out.println("Você se esgueira pela porta da cozinha aberta para ver se não tem ninguém\n");
-                         TimeUnit.SECONDS.sleep(3);
+                        System.out.println("\nVocê se esgueira pela porta da cozinha aberta para ver se não tem ninguém\n");
+                         TimeUnit.SECONDS.sleep(4);
                          System.out.println("Não tem ninguém. Você vê uma cozinha velha, típica de uma casa de campo.\n"
                                  + "As gavetas estão abertas.\n");
                         System.out.println("Na cozinha você encontra:");
@@ -47,7 +47,7 @@ public class corredorRat {
                         corredorRat.corredor();
                     case 3:
                         if (JogoPI.puzzled==false) {
-                            System.out.println("\nOuço pessoas na sala. Estaria me arriscando ao tentar abrir essa porta");
+                            System.out.println("\nOuço pessoas na sala. Estaria me arriscando ao tentar abrir essa porta.");
                             corredorRat.corredor();
                         }
                         else{
@@ -55,8 +55,15 @@ public class corredorRat {
                         }
                     case 4:
                         inventario.inventario();
-                        corredorRat.corredor();
-                    
+                        System.out.println("\nDeseja olhar a foto?");
+                        System.out.println("(1)SIM /(2)NÃO");
+                        int foto = s.nextInt();
+                        if (foto==1) {
+                            System.out.println("\nEste na foto. Me lembra um certo alguém... Faz muito tempo.");
+                        }
+                        else{
+                          corredorRat.corredor();
+                        }
                     case 5:
                         mapa.mapaCorredor();
                         corredorRat.corredor();

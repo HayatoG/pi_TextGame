@@ -8,14 +8,14 @@ public class Porao {
         try{
         if (JogoPI.nomeJogador.isEmpty()) {
         System.out.println("INSIRA SEU NOME:");
-        JogoPI.nomeJogador= s.next();
+        JogoPI.nomeJogador= s.nextLine();
         JogoPI.nomePlayer = JogoPI.nomeJogador.toUpperCase();
         }
         roteiro.verificacao1();
        
         if (JogoPI.Itens == false) {
             System.out.println("\n" +"(1) CAIXAS | (2) PORTA | (3) ESTANTE  ");
-            System.out.println(" O que você quer olhar?");
+            System.out.println("O que você quer olhar?");
         }
         else{
             System.out.println("\n" + "(1) CAIXAS | (2) PORTA | (3) ESTANTE | (4)INVENTÁRIO | (5) MAPA");
@@ -33,9 +33,9 @@ public class Porao {
                     case 1:
                         if (JogoPI.Lanterna==true) {
                             System.out.println("\n" + "Conseguindo enxergar melhor com a lanterna \n"
-                                    + "você encontra: ");
+                                    + "Você encontra: ");
                             TimeUnit.SECONDS.sleep(3);
-                            System.out.print("GAZUA\n");
+                            System.out.print("\nGAZUA\n");
                             JogoPI.inventario[1]= JogoPI.gazuaCaixas;
                             JogoPI.gazua=true;
                             JogoPI.Itens=true;
@@ -66,7 +66,7 @@ public class Porao {
                         JogoPI.Itens=true;
                         System.out.println("\n" + "Você encontrou: " );
                         TimeUnit.SECONDS.sleep(3);
-                            System.out.println("LANTERNA");
+                            System.out.println("\nLANTERNA");
                             TimeUnit.SECONDS.sleep(2);
                             System.out.println("\nMAPA");
                         Porao.porao();

@@ -63,11 +63,12 @@ public class roteiro {
                                 System.out.println("[" + JogoPI.nomePlayer + "]" + " Certo.\n");
                                 TimeUnit.SECONDS.sleep(3);
                                 System.out.println("[" + JogoPI.nomePlayer + "]" + "Estou trabalhando em um projeto para salvar o mundo.\n"
-                                        + "Um antigo colega tinha intenções maliciosas com esse mesmo projeto. Tenho que sair imediatamente.\n"
-                                        + "Cada segundo que passamos aqui é uma perda de tempo. Preciso da sua ajuda.\n");
+                                        + "Quem conseguir colocar as mãos nele e ter intenções maliciosas\npode fazer um estrago e tanto. Tenho que sair imediatamente."
+                                        + " Cada segundo que passamos\naqui é uma perda de tempo. Preciso da sua ajuda.\n");
                                 TimeUnit.SECONDS.sleep(5);
                                 System.out.println("[RAMON]" + " Salvar o mundo? nessas condições? eu bem que gostaria que fosse verdade."
                                         + "\nMas acho que devo te dar esse voto de confiança...\n");
+                                TimeUnit.SECONDS.sleep(3);
                                 JogoPI.puzzled=true;
                                 JogoPI.salaBatalha=true;
                                 System.out.println("[" + JogoPI.nomePlayer + "]" + " Certo, agora vamos pro quarto...\n");
