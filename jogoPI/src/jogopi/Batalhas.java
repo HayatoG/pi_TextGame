@@ -62,7 +62,7 @@ public class Batalhas {
                         TimeUnit.SECONDS.sleep(4);
                         System.out.println("[" + JogoPI.nomePlayer + "]" + " Uma pena que tenha que terminar assim.\n");
                         TimeUnit.SECONDS.sleep(4);
-                        System.out.println("[" + JogoPI.nomePlayer + "]" + " Isso ja foi longe demais, darei um fim nesses arquivos e encerrarei o projeto.\n");
+                        System.out.println("\n[" + JogoPI.nomePlayer + "]" + " Isso ja foi longe demais, darei um fim nesses arquivos e encerrarei o projeto.\n");
                         TimeUnit.SECONDS.sleep(4);
                         creditos.creditos();
                     }

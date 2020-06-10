@@ -83,14 +83,14 @@ public class puzzles {
     
     static void puzzle2(){
         try{
-        System.out.println("\nParece ser um anagrama neste cadeado. Qual poderia ser a palavra?");
+        System.out.println("\nParece ser um anagrama neste cadeado. Qual poderia ser a palavra?\n");
         
         if (JogoPI.capanga==true) {
             for (int i = 0; i < 30; i++) {
         String[][] deepArray = new String[][] {{"to", "rr"}, {"i", "da"}};
         System.out.println(Arrays.deepToString(deepArray));
        
-        System.out.println("O que está escrito?:");
+        System.out.println("\nO que está escrito?:");
         System.out.println("Pedir dica para o capanga? (1)");
         String resposta = s.next();
         
@@ -106,7 +106,7 @@ public class puzzles {
             TimeUnit.SECONDS.sleep(2);
             System.out.println("[RAMON] " + "Pronto! Vamos enfrenta-lo juntos!\n");
             TimeUnit.SECONDS.sleep(2);
-            System.out.println("[" + JogoPI.nomePlayer + "]" + " Pode deixar Ramon. Isso é pessoal... Enfreitarei sozinho.\n");
+            System.out.println("[" + JogoPI.nomePlayer + "]" + " Pode deixar Ramon. Isso é pessoal... Enfrentarei sozinho.\n");
             TimeUnit.SECONDS.sleep(2);
             System.out.println("[RAMON] " + "Certo. Te espero no carro.\n");
                      Quarto.quarto();
