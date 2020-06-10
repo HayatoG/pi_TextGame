@@ -22,7 +22,7 @@ public class roteiro {
         System.out.println(JogoPI.nomePlayer + " um(a) renomado(a) cientista, sai do seu laborátorio"
                 + " onde trabalhava\nem um projeto governamental às 02:45, "
                 + "parte em direção ao estacionamento,\nquando é abordado(a) por homens encapuzados que o(a) drogam e o(a)"
-                + " forçam a entrar em um kombi.");
+                + " forçam a entrar em uma Kombi.");
          TimeUnit.SECONDS.sleep(5);
         
         System.out.println("\nApós algum tempo, acorda sem entender onde está, perdido(a), olha ao redor");
