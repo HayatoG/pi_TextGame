@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class JogoPI {
     static boolean Itens = false;
     static boolean Lanterna=false;
-    
     static boolean Foto=false;
     static boolean ChaveCarro=false;
     static boolean gazua = false;
@@ -15,6 +14,7 @@ public class JogoPI {
     static boolean finalj = false;
     static boolean salaBatalha = false;
     static boolean erva = false;
+    static boolean capanga = false;
         
     static boolean inicio = false;
     static boolean porao = false;

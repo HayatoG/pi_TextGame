@@ -82,21 +82,57 @@ public class puzzles {
     }
     
     static void puzzle2(){
+        try{
         System.out.println("\nParece ser um anagrama neste cadeado. Qual poderia ser a palavra?");
-        int tentativas=0;
         
-        for (int i = 0; i < 10; i++) {
+        if (JogoPI.capanga==true) {
+            for (int i = 0; i < 30; i++) {
+        String[][] deepArray = new String[][] {{"to", "rr"}, {"i", "da"}};
+        System.out.println(Arrays.deepToString(deepArray));
+       
+        System.out.println("O que está escrito?:");
+        System.out.println("Pedir dica para o capanga? (1)");
+        String resposta = s.next();
+        
+        if (resposta.equals("1")) {
+            System.out.println("[RAMON] " + "hmm, acho que as primeiras três letras são T R A");   
+            puzzles.puzzle2();
+        }
+        
+        if (resposta.equalsIgnoreCase("traidor")) {
+            System.out.println("\nTraidor? A foto !!!.Uma vez no laboratório o Vicente "
+            + "me mostrou uma foto em família\n" +
+            "Essa é a foto. É o Vicente que está por trás disso tudo...\n");
+            TimeUnit.SECONDS.sleep(2);
+            System.out.println("[RAMON] " + "Pronto! Vamos enfrenta-lo juntos!\n");
+            TimeUnit.SECONDS.sleep(2);
+            System.out.println("[" + JogoPI.nomePlayer + "]" + "Pode deixar Ramon. Isso é pessoal... Enfreitarei sozinho\n");
+            TimeUnit.SECONDS.sleep(2);
+            System.out.println("[RAMON] " + "Certo. Te espero no carro.\n");
+                     Quarto.quarto();
+                     break;
+        }
+        else{
+            System.out.println("Não parece ser a palavra...");
+        }
+       
+            }
+        }
+       }catch(InterruptedException ie){
+                Thread.currentThread().interrupt();
+      }
+        
+        for (int i = 0; i < 30; i++) {
         String[][] deepArray = new String[][] {{"to", "rr"}, {"i", "da"}};
         System.out.println(Arrays.deepToString(deepArray));
        
         System.out.println("O que está escrito?:");
         String resposta = s.next();
-        tentativas++;
         
         if (resposta.equalsIgnoreCase("traidor")) {
-            System.out.println("\nTraidor? Essa palavra me alguém a cabeça."
-                    +  " Um dos meus melhores amigos me acusou de ser traidor por não\n"
-                    + "querer participar de um plano maligno...\n");
+            System.out.println("\nTraidor? A foto !!!.Uma vez no laboratório o Vicente "
+            + "me mostrou uma foto em família\n" +
+            "Essa é a foto. É o Vicente que está por trás disso tudo...\n");
                      Quarto.quarto();
                      break;
         }

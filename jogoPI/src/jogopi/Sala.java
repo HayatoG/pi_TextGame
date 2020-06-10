@@ -18,7 +18,7 @@ public class Sala {
         else if (JogoPI.erva == false){
             System.out.println("\nUm deles está dormindo...");
             TimeUnit.SECONDS.sleep(2);
-            System.out.println("\nVocê encontrou: ");
+            System.out.println("\nNa sala você encontrou: ");
             TimeUnit.SECONDS.sleep(3);
             System.out.println("ERVA\n");
             JogoPI.inventario[4]= JogoPI.ervinhaCura;
@@ -44,7 +44,7 @@ public class Sala {
                             TimeUnit.SECONDS.sleep(3);
                             System.out.println("Sequestrador morto...");
                             TimeUnit.SECONDS.sleep(2);
-                            System.out.println("\nCom o sequestrador você encontrou:");
+                            System.out.println("\nNo sequestrador você encontrou:");
                             TimeUnit.SECONDS.sleep(3);
                             System.out.println("\nFACA");
                             TimeUnit.SECONDS.sleep(2);
@@ -66,6 +66,7 @@ public class Sala {
                             }
                             else if(segundadecisao == 2){
                                 roteiro.salaConversa();
+                                JogoPI.capanga=true;
                                 corredorRat.corredor();
                             }
                             else{

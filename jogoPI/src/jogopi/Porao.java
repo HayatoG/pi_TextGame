@@ -33,7 +33,7 @@ public class Porao {
                     case 1:
                         if (JogoPI.Lanterna==true) {
                             System.out.println("\n" + "Conseguindo enxergar melhor com a lanterna \n"
-                                    + "Você encontra: ");
+                                    + "Nas caixas você encontrou: ");
                             TimeUnit.SECONDS.sleep(3);
                             System.out.print("\nGAZUA\n");
                             JogoPI.inventario[1]= JogoPI.gazuaCaixas;
@@ -64,11 +64,11 @@ public class Porao {
                         JogoPI.inventario[0]= JogoPI.lanternaEstante;
                         JogoPI.Lanterna=true;
                         JogoPI.Itens=true;
-                        System.out.println("\n" + "Você encontrou: " );
+                        System.out.println("\n" + "Na estante você encontrou:\n " );
                         TimeUnit.SECONDS.sleep(3);
-                            System.out.println("\nLANTERNA");
+                            System.out.println("LANTERNA");
                             TimeUnit.SECONDS.sleep(2);
-                            System.out.println("\nMAPA");
+                            System.out.println("MAPA");
                         Porao.porao();
                         }
                     case 4:

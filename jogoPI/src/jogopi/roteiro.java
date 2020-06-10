@@ -19,14 +19,14 @@ public class roteiro {
     static void inicio(){
         System.out.println("\nDIA 25/10/1995 \n");
         try{
-        System.out.println(JogoPI.nomePlayer + " umx renomadx cientista, sai do seu laborátorio"
+        System.out.println(JogoPI.nomePlayer + " um(a) renomad(a) cientista, sai do seu laborátorio"
                 + " onde trabalhava\nem um projeto governamental às 02:45, "
-                + "parte em direção ao estacionamento,\nquando é abordado por homens encapuzados que o drogam e o"
+                + "parte em direção ao estacionamento,\nquando é abordado(a) por homens encapuzados que o(a) drogam e o(a)"
                 + " forçam a entrar em um kombi.");
          TimeUnit.SECONDS.sleep(5);
         
-        System.out.println("\nApós algum tempo, acorda sem entender onde está, perdido, olha ao redor");
-        TimeUnit.SECONDS.sleep(3);
+        System.out.println("\nApós algum tempo, acorda sem entender onde está, perdido(a), olha ao redor");
+        TimeUnit.SECONDS.sleep(4);
         JogoPI.inicio=true;
         }
         catch(InterruptedException ie){
@@ -49,30 +49,35 @@ public class roteiro {
     static void salaConversa(){
         try{
            System.out.println("[" + JogoPI.nomePlayer + "]" + " Jogue sua arma no chão!\n");
-                                TimeUnit.SECONDS.sleep(2);
-                                System.out.println("[RAMON]" + " Jogue você primeiro! você acabou de matar o MIROSMAR\n");
-                                 TimeUnit.SECONDS.sleep(2);
-                                 System.out.println("[" + JogoPI.nomePlayer + "]" + " Se eu abaixar você também abaixa?!\n");
+                                TimeUnit.SECONDS.sleep(3);
+           System.out.println("[RAMON]" + " Jogue você primeiro! você acabou de matar o Mirosmar\n");
+                                 TimeUnit.SECONDS.sleep(3);
+           System.out.println("[" + JogoPI.nomePlayer + "]" + " Se eu abaixar você também abaixa?!\n");
                                  TimeUnit.SECONDS.sleep(4);
-                                System.out.println("[RAMON]" + " As calças?????\n");
-                                TimeUnit.SECONDS.sleep(2);
-                                System.out.println("[" + JogoPI.nomePlayer + "]" + " Não né burro! a arma. Vamos abaixar ao mesmo tempo\n");
-                                TimeUnit.SECONDS.sleep(2);
-                                System.out.println("[RAMON]" + " Certo abaixairei... no 3 certo?\n");
-                                TimeUnit.SECONDS.sleep(2);
-                                System.out.println("[" + JogoPI.nomePlayer + "]" + " Certo.\n");
+           System.out.println("[RAMON]" + " As calças?????\n");
                                 TimeUnit.SECONDS.sleep(3);
-                                System.out.println("[" + JogoPI.nomePlayer + "]" + "Estou trabalhando em um projeto para salvar o mundo.\n"
-                                        + "Quem conseguir colocar as mãos nele e ter intenções maliciosas\npode fazer um estrago e tanto. Tenho que sair imediatamente."
-                                        + " Cada segundo que passamos\naqui é uma perda de tempo. Preciso da sua ajuda.\n");
-                                TimeUnit.SECONDS.sleep(5);
-                                System.out.println("[RAMON]" + " Salvar o mundo? nessas condições? eu bem que gostaria que fosse verdade."
-                                        + "\nMas acho que devo te dar esse voto de confiança...\n");
+           System.out.println("[" + JogoPI.nomePlayer + "]" + " Não né burro! a arma. Vamos abaixar ao mesmo tempo\n");
                                 TimeUnit.SECONDS.sleep(3);
+           System.out.println("[RAMON]" + " Certo abaixarei... no 3 certo?\n");
+                                TimeUnit.SECONDS.sleep(3);
+           System.out.println("[" + JogoPI.nomePlayer + "]" + " Certo.\n");
+                                TimeUnit.SECONDS.sleep(3);
+           System.out.println("[" + JogoPI.nomePlayer + "]" + " Estou trabalhando em um projeto governamental secreto,\n" +
+"temo que o meu sequestro esteja ligado a isso.\n" +
+"Cada segundo que passamos aqui sinto que uma catástrofe se aproxima...\n");
+                                TimeUnit.SECONDS.sleep(6);
+           System.out.println("[RAMON]" + " Projeto secreto? eu bem que gostaria que fosse verdade.\n" +
+"Mas acho que devo te dar esse voto de confiança...\n");
+                                TimeUnit.SECONDS.sleep(4);
                                 JogoPI.puzzled=true;
                                 JogoPI.salaBatalha=true;
-                                System.out.println("[" + JogoPI.nomePlayer + "]" + " Certo, agora vamos pro quarto...\n");
-                                TimeUnit.SECONDS.sleep(2);
+           System.out.println("[" + JogoPI.nomePlayer + "]" + " Certo, agora vamos sair daqui com aquela chave do carro\n"
+                   + "que peguei emprestada com seu amigo.\n");
+                                TimeUnit.SECONDS.sleep(5);
+           System.out.println("[RAMON]" + "  Você não quer saber quem está por trás disso tudo? \n" +
+"O chefe fica trancado naquele quarto e nunca sai.\n" +
+"o jeito que está  parece que ele sabe quem esta planejando tudo");
+                                TimeUnit.SECONDS.sleep(4);
             
         }catch(InterruptedException ie){
                 Thread.currentThread().interrupt();
@@ -83,7 +88,7 @@ public class roteiro {
     static void corredor(){
         try{
             System.out.println("Após conseguir passar pela porta você encontra um largo corredor.\n");
-             TimeUnit.SECONDS.sleep(2);
+             TimeUnit.SECONDS.sleep(3);
             System.out.println("Escuro, silêncio absoluto, quadros e fotos pelas paredes.\n"
                     + "Analisando as fotos percebe que uma delas não é desconhecida, já havia visto aquele rosto \n"
                     + "em algum lugar, retira da parede e guarda em seu bolso. ");

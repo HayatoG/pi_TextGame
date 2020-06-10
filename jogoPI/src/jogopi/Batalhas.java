@@ -43,16 +43,16 @@ public class Batalhas {
                         System.out.println("FIM DE JOGO\n");
                         System.out.println("Você morreu e está retornando ao último ponto do jogo disponível..\n");
                         TimeUnit.SECONDS.sleep(3);
-                        System.out.println("O quarto, na conversa com Vincente.\n");
+                        System.out.println("O quarto, na conversa com Vicente.\n");
                         Quarto.quarto();
                         
                     } else {
                         System.out.println("[VICENTE] Outras pessoas virão para pegar esse projeto.......\n");
-                        TimeUnit.SECONDS.sleep(2);
+                        TimeUnit.SECONDS.sleep(4);
                         System.out.println("[" + JogoPI.nomePlayer + "]" + " Uma pena que tenha que terminar assim.\n");
-                        TimeUnit.SECONDS.sleep(2);
+                        TimeUnit.SECONDS.sleep(4);
                         System.out.println("[" + JogoPI.nomePlayer + "]" + " Isso ja foi longe demais, darei um fim nesses arquivos e encerrarei o projeto.\n");
-                        TimeUnit.SECONDS.sleep(3);
+                        TimeUnit.SECONDS.sleep(4);
                         creditos.creditos();
                     }
                     }catch(InterruptedException ie){
@@ -64,21 +64,21 @@ public class Batalhas {
                 energiaInimigo = 6;
                 energiaJogador = 6;
                 System.out.println("[" + JogoPI.nomePlayer + "]" + " Calma Vicente, podemos conversar e acertar as coisas, você precisa de dinheiro?" + "\n");
-                TimeUnit.SECONDS.sleep(3);
+                TimeUnit.SECONDS.sleep(4);
                 System.out.println("[VICENTE] Dinheiro nunca foi o problema. Eu quero controle e com você fora do meu caminho tudo ficará mais fácil!\n");
-                TimeUnit.SECONDS.sleep(3);
+                TimeUnit.SECONDS.sleep(4);
                 System.out.println("[" + JogoPI.nomePlayer + "]" + " Eu vou embora então, vamos fingir que nada disso aconteceu!\n");
-                TimeUnit.SECONDS.sleep(3);
-                System.out.println("[VICENTE]: Agora já é tarde, preciso terminar o que comecei...\n");
-                TimeUnit.SECONDS.sleep(3);
+                TimeUnit.SECONDS.sleep(4);
+                System.out.println("[VICENTE] Agora já é tarde, preciso terminar o que comecei...\n");
+                TimeUnit.SECONDS.sleep(4);
                 System.out.println("[ VICENTE ACIONA UM BOTÃO E PULA PELA JANELA, " + JogoPI.nomePlayer  + " NÃO ESPERA PARA VER O QUE ACONTECERÁ E PULA TAMBEM. ]\n");
-                TimeUnit.SECONDS.sleep(3);
+                TimeUnit.SECONDS.sleep(4);
                 System.out.println("(1) FUGIR | (2) LUTAR");
                 int decisao = s.nextInt();
 
                 if (decisao == 1) {
                     System.out.println("[ VICENTE FICA COM OS ARQUIVOS E O PROJETO FOI ROUBADO. ]" + "\n" + "O mundo agora "
-                            + "sofrerá nas mãos tirânicas de Vincente.\nA humanidade está condenada a nova ordem mundial.");
+                            + "sofrerá nas mãos tirânicas de Vicente.\nA humanidade está condenada a nova ordem mundial.");
                     creditos.creditos();
                 
                 } else if (decisao == 2){
@@ -119,10 +119,6 @@ public class Batalhas {
                         TimeUnit.SECONDS.sleep(3);
                         creditos.creditos();
                     }
-                    /*else{
-                        System.out.println("\nFIM DE JOGO");
-                        creditos.creditos();
-                    }*/
                     
                 }
         }catch(InterruptedException ie){
@@ -148,7 +144,7 @@ public class Batalhas {
                         System.out.println("\nENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
                         System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "6 " + "--\n");
                         TimeUnit.SECONDS.sleep(2);
-                        System.out.println("\nMORREU!");
+                        System.out.println("\nInimigo abatido!\n");
                     }
                 }
                 else if (decisao == 2){
