@@ -37,7 +37,7 @@ public class roteiro {
     static void porao(){
         try{
             System.out.println("\nAcorda em um porão sujo, escuro e com a única fonte de luz vindo de uma "
-                    + " pequena janela.");
+                    + "pequena janela.");
             System.out.println("Com diversas caixas empilhadas e estantes velhas.");
             TimeUnit.SECONDS.sleep(5);
             JogoPI.porao=true;
