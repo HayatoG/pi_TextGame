@@ -19,7 +19,7 @@ public class roteiro {
     static void inicio(){
         System.out.println("\nDIA 25/10/1995 \n");
         try{
-        System.out.println(JogoPI.nomePlayer + " um(a) renomad(a) cientista, sai do seu laborátorio"
+        System.out.println(JogoPI.nomePlayer + " um(a) renomado(a) cientista, sai do seu laborátorio"
                 + " onde trabalhava\nem um projeto governamental às 02:45, "
                 + "parte em direção ao estacionamento,\nquando é abordado(a) por homens encapuzados que o(a) drogam e o(a)"
                 + " forçam a entrar em um kombi.");
@@ -74,7 +74,7 @@ public class roteiro {
            System.out.println("[" + JogoPI.nomePlayer + "]" + " Certo, agora vamos sair daqui com aquela chave do carro\n"
                    + "que peguei emprestada com seu amigo.\n");
                                 TimeUnit.SECONDS.sleep(5);
-           System.out.println("[RAMON]" + "  Você não quer saber quem está por trás disso tudo? \n" +
+           System.out.println("[RAMON]" + " Você não quer saber quem está por trás disso tudo? \n" +
 "O chefe fica trancado naquele quarto e nunca sai.\n" +
 "o jeito que está  parece que ele sabe quem esta planejando tudo");
                                 TimeUnit.SECONDS.sleep(4);

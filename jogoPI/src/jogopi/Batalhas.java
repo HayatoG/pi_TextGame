@@ -32,8 +32,19 @@ public class Batalhas {
                             System.out.println("(1) SIM | (2) NÃO");
                             int erva = s.nextInt();
                             if(erva == 1){
-                                energiaJogador += 2;
-                                System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
+                                if (energiaJogador%2 != 0){
+                                    energiaJogador += 1;
+                                    System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
+                                }
+                                else if (energiaJogador < 6){
+                                    energiaJogador += 2;
+                                    System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
+                                }
+                                else{
+                                    System.out.println("ENERGIA ATUAL JÁ É A MÁXIMA.");
+                                    System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
+                                    Batalhas.atacarInimigo();
+                                }
                             }else {
                                 Batalhas.atacarInimigo();
                             }
@@ -104,14 +115,25 @@ public class Batalhas {
                             System.out.println("(1) SIM | (2) NÃO");
                             int erva = s.nextInt();
                             if(erva == 1){
-                                energiaJogador += 2;
+                                if (energiaJogador%2 != 0){
+                                energiaJogador += 1;
                                 System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
-                            }else {
+                                }
+                                else if (energiaJogador < 6){
+                                    energiaJogador += 2;
+                                    System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
+                                }
+                                else{
+                                    System.out.println("ENERGIA ATUAL JÁ É A MÁXIMA.");
+                                    System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
+                                    decisao = 2;
+                                }
+                            }   
+                            else {
                                 decisao = 2;
                             }
                         }
-                    }    
-                    
+                    }   
                     if (energiaInimigo <= 0) {
                         System.out.println("[" + JogoPI.nomePlayer + "]" + "Uma pena que tenha terminado dessa forma...");
                         TimeUnit.SECONDS.sleep(2);
@@ -119,17 +141,15 @@ public class Batalhas {
                         TimeUnit.SECONDS.sleep(3);
                         creditos.creditos();
                     }
-                    
                 }
         }catch(InterruptedException ie){
                 Thread.currentThread().interrupt();
-      }
-        
+      }   
     }
     static void atirarInimigo(){
         try{
         int sorte;
-        do{
+        do{ 
             sorte = aleatorio.nextInt(10) + 1;
             System.out.println("*POW*");
             TimeUnit.SECONDS.sleep(2);
@@ -153,8 +173,19 @@ public class Batalhas {
                     System.out.println("(1) SIM | (2) NÃO");
                     int erva = s.nextInt();
                     if(erva == 1){
-                        energiaJogador += 2;
-                        System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--");
+                        if (energiaJogador%2 != 0){
+                            energiaJogador += 1;
+                            System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
+                        }
+                        else if (energiaJogador < 6){
+                            energiaJogador += 2;
+                            System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
+                        }
+                        else{
+                            System.out.println("ENERGIA ATUAL JÁ É A MÁXIMA.");
+                            System.out.println("SUA ENERGIA ATUAL -- " + energiaJogador + " / " + "6 " + "--\n");
+                            decisao = 2;
+                        }
                     }
                     else {
                         atirarInimigo();
@@ -167,10 +198,11 @@ public class Batalhas {
                 System.out.println("ENERGIA DO INIMIGO -- " + energiaInimigo + " / " + "6 " + "--");
                 System.out.println("ENERGIA DO JOGADOR -- " + energiaJogador + " / " + "6 " + "--");
                 if(energiaJogador <= 0){
-                    System.out.println("Sinto muito, você morreu...");
-                    System.out.println("Você morreu e está retornando ao último ponto do jogo disponível");
+                    System.out.println("\n[Sinto muito, você morreu...]");
+                    System.out.println("\n[Você morreu e está retornando ao último ponto do jogo disponível.]");
                     TimeUnit.SECONDS.sleep(3);
-                    System.out.println("Sala onde o sequestrador estava dormindo.");
+                    System.out.println("[Sala onde o sequestrador estava dormindo.\n]");
+                    
                     Sala.sala();
                 }
             } 

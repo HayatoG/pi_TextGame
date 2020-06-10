@@ -100,13 +100,13 @@ public class puzzles {
         }
         
         if (resposta.equalsIgnoreCase("traidor")) {
-            System.out.println("\nTraidor? A foto !!!.Uma vez no laboratório o Vicente "
+            System.out.println("\n[" + JogoPI.nomePlayer + "]" + " Traidor? A foto !!!.Uma vez no laboratório o Vicente "
             + "me mostrou uma foto em família\n" +
             "Essa é a foto. É o Vicente que está por trás disso tudo...\n");
             TimeUnit.SECONDS.sleep(2);
             System.out.println("[RAMON] " + "Pronto! Vamos enfrenta-lo juntos!\n");
             TimeUnit.SECONDS.sleep(2);
-            System.out.println("[" + JogoPI.nomePlayer + "]" + "Pode deixar Ramon. Isso é pessoal... Enfreitarei sozinho\n");
+            System.out.println("[" + JogoPI.nomePlayer + "]" + " Pode deixar Ramon. Isso é pessoal... Enfreitarei sozinho.\n");
             TimeUnit.SECONDS.sleep(2);
             System.out.println("[RAMON] " + "Certo. Te espero no carro.\n");
                      Quarto.quarto();

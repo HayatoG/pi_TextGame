@@ -58,6 +58,8 @@ public class Sala {
                             System.out.println("(1) ATIRAR | (2) CONVERSAR ");
                             int segundadecisao = s.nextInt();
                             if(segundadecisao == 1){
+                                energiaInimigo = 6;
+                                energiaJogador = 6;
                                 Batalhas.atirarInimigo();
                                 JogoPI.salaBatalha=true;
                                 JogoPI.puzzled=true;
